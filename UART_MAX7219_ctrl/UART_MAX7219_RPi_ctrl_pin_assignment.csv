@@ -1,0 +1,36 @@
+# Copyright (C) 2018  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+
+# Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+# File: B:\Documents\GitHub\Quartus_Projects\UART_MAX7219_ctrl\UART_MAX7219_RPi_ctrl_pin_assignment.csv
+# Generated on: Sat May 22 11:49:24 2021
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus Prime software.
+
+To,Direction,Location,I/O Bank,VREF Group,Fitter Location,I/O Standard,Reserved,Current Strength,Slew Rate,Differential Pair,Strict Preservation
+clk,Input,PIN_R8,3,B3_N0,PIN_E1,,,,,,
+i_rx,Input,PIN_J14,5,B5_N0,PIN_R10,,,,,,
+o_leds[7],Output,PIN_L3,2,B2_N0,PIN_C6,,,,,,
+o_leds[6],Output,PIN_B1,1,B1_N0,PIN_T15,,,,,,
+o_leds[5],Output,PIN_F3,1,B1_N0,PIN_A11,,,,,,
+o_leds[4],Output,PIN_D1,1,B1_N0,PIN_R3,,,,,,
+o_leds[3],Output,PIN_A11,7,B7_N0,PIN_E8,,,,,,
+o_leds[2],Output,PIN_B13,7,B7_N0,PIN_N6,,,,,,
+o_leds[1],Output,PIN_A13,7,B7_N0,PIN_R11,,,,,,
+o_leds[0],Output,PIN_A15,7,B7_N0,PIN_T10,,,,,,
+o_max7219_clk,Output,PIN_T13,4,B4_N0,PIN_N8,,,,,,
+o_max7219_data,Output,PIN_T15,4,B4_N0,PIN_P8,,,,,,
+o_max7219_load,Output,PIN_F13,6,B6_N0,PIN_M8,,,,,,
+o_tx,Output,PIN_J13,5,B5_N0,PIN_N9,,,,,,
+rst_n,Input,PIN_J15,5,B5_N0,PIN_M2,,,,,,
