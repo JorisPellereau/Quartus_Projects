@@ -1,0 +1,507 @@
+Analysis & Synthesis report for LCD_pr_115_board
+Sun Dec  4 19:04:02 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: lcd_cfah_top:i_lcd_cfah_top_0
+ 13. Parameter Settings for User Entity Instance: lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_init:i_lcd_cfah_init_0
+ 14. Parameter Settings for User Entity Instance: lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_cmd_buffer:i_lcd_cfah_cmd_buffer_0
+ 15. Parameter Settings for User Entity Instance: lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_itf:i_lcd_cfah_itf_0
+ 16. Port Connectivity Checks: "lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_cmd_buffer:i_lcd_cfah_cmd_buffer_0"
+ 17. Port Connectivity Checks: "lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_polling_busy:i_lcd_cfah_polling_busy_0"
+ 18. Port Connectivity Checks: "lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_init:i_lcd_cfah_init_0"
+ 19. Post-Synthesis Netlist Statistics for Top Partition
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun Dec  4 19:04:02 2022       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; LCD_pr_115_board                            ;
+; Top-level Entity Name              ; pr_115_lcd_top                              ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 163                                         ;
+;     Total combinational functions  ; 133                                         ;
+;     Dedicated logic registers      ; 116                                         ;
+; Total registers                    ; 116                                         ;
+; Total pins                         ; 21                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; pr_115_lcd_top     ; LCD_pr_115_board   ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                     ;
++-------------------------------------------------------------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                                                          ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                     ; Library ;
++-------------------------------------------------------------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------+---------+
+; ../../../VHDL_code/PR_115/sources/lib_pr_115_lcd_top/pr_115_lcd_top.vhd                   ; yes             ; User VHDL File  ; /home/linux-jp/Documents/GitHub/VHDL_code/PR_115/sources/lib_pr_115_lcd_top/pr_115_lcd_top.vhd                   ;         ;
+; ../../../VHDL_code/PKG/sources/lib_pkg_utils/pkg_utils.vhd                                ; yes             ; User VHDL File  ; /home/linux-jp/Documents/GitHub/VHDL_code/PKG/sources/lib_pkg_utils/pkg_utils.vhd                                ;         ;
+; ../../../VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/pkg_lcd_cfah.vhd           ; yes             ; User VHDL File  ; /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/pkg_lcd_cfah.vhd           ;         ;
+; ../../../VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_top.vhd           ; yes             ; User VHDL File  ; /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_top.vhd           ;         ;
+; ../../../VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_polling_busy.vhd  ; yes             ; User VHDL File  ; /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_polling_busy.vhd  ;         ;
+; ../../../VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_itf.vhd           ; yes             ; User VHDL File  ; /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_itf.vhd           ;         ;
+; ../../../VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_init.vhd          ; yes             ; User VHDL File  ; /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_init.vhd          ;         ;
+; ../../../VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_cmd_generator.vhd ; yes             ; User VHDL File  ; /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_cmd_generator.vhd ;         ;
+; ../../../VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_cmd_buffer.vhd    ; yes             ; User VHDL File  ; /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_cmd_buffer.vhd    ;         ;
++-------------------------------------------------------------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 163       ;
+;                                             ;           ;
+; Total combinational functions               ; 133       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 49        ;
+;     -- 3 input functions                    ; 31        ;
+;     -- <=2 input functions                  ; 53        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 106       ;
+;     -- arithmetic mode                      ; 27        ;
+;                                             ;           ;
+; Total registers                             ; 116       ;
+;     -- Dedicated logic registers            ; 116       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 21        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 116       ;
+; Total fan-out                               ; 869       ;
+; Average fan-out                             ; 2.91      ;
++---------------------------------------------+-----------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                            ;
++-----------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------+------------------------+--------------+
+; Compilation Hierarchy Node                                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                             ; Entity Name            ; Library Name ;
++-----------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------+------------------------+--------------+
+; |pr_115_lcd_top                                           ; 133 (0)             ; 116 (21)                  ; 0           ; 0            ; 0       ; 0         ; 21   ; 0            ; |pr_115_lcd_top                                                                                 ; pr_115_lcd_top         ; work         ;
+;    |lcd_cfah_top:i_lcd_cfah_top_0|                        ; 133 (4)             ; 95 (5)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pr_115_lcd_top|lcd_cfah_top:i_lcd_cfah_top_0                                                   ; lcd_cfah_top           ; work         ;
+;       |lcd_cfah_cmd_buffer:i_lcd_cfah_cmd_buffer_0|       ; 10 (10)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pr_115_lcd_top|lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_cmd_buffer:i_lcd_cfah_cmd_buffer_0       ; lcd_cfah_cmd_buffer    ; work         ;
+;       |lcd_cfah_cmd_generator:i_lcd_cfah_cmd_generator_0| ; 12 (12)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pr_115_lcd_top|lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_cmd_generator:i_lcd_cfah_cmd_generator_0 ; lcd_cfah_cmd_generator ; work         ;
+;       |lcd_cfah_init:i_lcd_cfah_init_0|                   ; 72 (72)             ; 43 (43)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pr_115_lcd_top|lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_init:i_lcd_cfah_init_0                   ; lcd_cfah_init          ; work         ;
+;       |lcd_cfah_itf:i_lcd_cfah_itf_0|                     ; 32 (32)             ; 22 (22)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pr_115_lcd_top|lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_itf:i_lcd_cfah_itf_0                     ; lcd_cfah_itf           ; work         ;
+;       |lcd_cfah_polling_busy:i_lcd_cfah_polling_busy_0|   ; 3 (3)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pr_115_lcd_top|lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_polling_busy:i_lcd_cfah_polling_busy_0   ; lcd_cfah_polling_busy  ; work         ;
++-----------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------+------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                                ;
++----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+
+; Register name                                                                                      ; Reason for Removal                                                                           ;
++----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+
+; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_cmd_buffer:i_lcd_cfah_cmd_buffer_0|s_id_sh[0,1]             ; Stuck at GND due to stuck port data_in                                                       ;
+; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_cmd_buffer:i_lcd_cfah_cmd_buffer_0|s_sc_rl[0,1]             ; Stuck at GND due to stuck port clock_enable                                                  ;
+; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_cmd_buffer:i_lcd_cfah_cmd_buffer_0|s_cmd[1,4,6..9]          ; Stuck at GND due to stuck port data_in                                                       ;
+; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_cmd_generator:i_lcd_cfah_cmd_generator_0|o_rs               ; Stuck at GND due to stuck port data_in                                                       ;
+; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_cmd_generator:i_lcd_cfah_cmd_generator_0|o_lcd_wdata[6,7]   ; Stuck at GND due to stuck port data_in                                                       ;
+; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_cmd_buffer:i_lcd_cfah_cmd_buffer_0|s_data_bus[0..2,4..7]    ; Lost fanout                                                                                  ;
+; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_itf:i_lcd_cfah_itf_0|s_wdata[6]                             ; Merged with lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_itf:i_lcd_cfah_itf_0|s_wdata[7]           ;
+; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_init:i_lcd_cfah_init_0|s_duration_max[0..2,11,14,18,20..22] ; Merged with lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_init:i_lcd_cfah_init_0|s_duration_max[23] ;
+; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_init:i_lcd_cfah_init_0|s_duration_max[5,15]                 ; Merged with lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_init:i_lcd_cfah_init_0|s_duration_max[19] ;
+; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_init:i_lcd_cfah_init_0|s_duration_max[4,10,16]              ; Merged with lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_init:i_lcd_cfah_init_0|s_duration_max[17] ;
+; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_init:i_lcd_cfah_init_0|s_duration_max[6]                    ; Merged with lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_init:i_lcd_cfah_init_0|s_duration_max[13] ;
+; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_init:i_lcd_cfah_init_0|s_duration_max[7]                    ; Merged with lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_init:i_lcd_cfah_init_0|s_duration_max[9]  ;
+; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_init:i_lcd_cfah_init_0|s_duration_max[3]                    ; Merged with lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_init:i_lcd_cfah_init_0|s_duration_max[8]  ;
+; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_itf:i_lcd_cfah_itf_0|o_lcd_wdata[6]                         ; Merged with lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_itf:i_lcd_cfah_itf_0|o_lcd_wdata[7]       ;
+; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_cmd_buffer:i_lcd_cfah_cmd_buffer_0|s_data_bus[3]            ; Lost fanout                                                                                  ;
+; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_itf:i_lcd_cfah_itf_0|s_rs                                   ; Stuck at GND due to stuck port data_in                                                       ;
+; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_itf:i_lcd_cfah_itf_0|s_wdata[7]                             ; Stuck at GND due to stuck port data_in                                                       ;
+; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_init:i_lcd_cfah_init_0|s_duration_max[23]                   ; Stuck at GND due to stuck port data_in                                                       ;
+; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_itf:i_lcd_cfah_itf_0|o_lcd_wdata[7]                         ; Stuck at GND due to stuck port data_in                                                       ;
+; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_init:i_lcd_cfah_init_0|s_init_done                          ; Lost fanout                                                                                  ;
+; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_init:i_lcd_cfah_init_0|s_cnt_cmd[3]                         ; Stuck at GND due to stuck port data_in                                                       ;
+; Total Number of Removed Registers = 46                                                             ;                                                                                              ;
++----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                                                             ;
++--------------------------------------------------------------------------------------+--------------------------------+-------------------------------------------------------------------------------------------------+
+; Register name                                                                        ; Reason for Removal             ; Registers Removed due to This Register                                                          ;
++--------------------------------------------------------------------------------------+--------------------------------+-------------------------------------------------------------------------------------------------+
+; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_cmd_buffer:i_lcd_cfah_cmd_buffer_0|s_cmd[8]   ; Stuck at GND                   ; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_cmd_buffer:i_lcd_cfah_cmd_buffer_0|s_data_bus[7],        ;
+;                                                                                      ; due to stuck port data_in      ; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_cmd_buffer:i_lcd_cfah_cmd_buffer_0|s_data_bus[6],        ;
+;                                                                                      ;                                ; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_cmd_buffer:i_lcd_cfah_cmd_buffer_0|s_data_bus[5],        ;
+;                                                                                      ;                                ; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_cmd_buffer:i_lcd_cfah_cmd_buffer_0|s_data_bus[4]         ;
+; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_cmd_buffer:i_lcd_cfah_cmd_buffer_0|s_cmd[7]   ; Stuck at GND                   ; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_cmd_generator:i_lcd_cfah_cmd_generator_0|o_lcd_wdata[7], ;
+;                                                                                      ; due to stuck port data_in      ; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_cmd_generator:i_lcd_cfah_cmd_generator_0|o_lcd_wdata[6], ;
+;                                                                                      ;                                ; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_itf:i_lcd_cfah_itf_0|s_wdata[7],                         ;
+;                                                                                      ;                                ; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_itf:i_lcd_cfah_itf_0|o_lcd_wdata[7]                      ;
+; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_cmd_buffer:i_lcd_cfah_cmd_buffer_0|s_cmd[9]   ; Stuck at GND                   ; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_cmd_generator:i_lcd_cfah_cmd_generator_0|o_rs,           ;
+;                                                                                      ; due to stuck port data_in      ; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_itf:i_lcd_cfah_itf_0|s_rs                                ;
+; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_cmd_buffer:i_lcd_cfah_cmd_buffer_0|s_id_sh[1] ; Stuck at GND                   ; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_cmd_buffer:i_lcd_cfah_cmd_buffer_0|s_data_bus[1]         ;
+;                                                                                      ; due to stuck port data_in      ;                                                                                                 ;
+; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_cmd_buffer:i_lcd_cfah_cmd_buffer_0|s_id_sh[0] ; Stuck at GND                   ; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_cmd_buffer:i_lcd_cfah_cmd_buffer_0|s_data_bus[0]         ;
+;                                                                                      ; due to stuck port data_in      ;                                                                                                 ;
+; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_cmd_buffer:i_lcd_cfah_cmd_buffer_0|s_sc_rl[1] ; Stuck at GND                   ; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_cmd_buffer:i_lcd_cfah_cmd_buffer_0|s_data_bus[3]         ;
+;                                                                                      ; due to stuck port clock_enable ;                                                                                                 ;
+; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_cmd_buffer:i_lcd_cfah_cmd_buffer_0|s_sc_rl[0] ; Stuck at GND                   ; lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_cmd_buffer:i_lcd_cfah_cmd_buffer_0|s_data_bus[2]         ;
+;                                                                                      ; due to stuck port clock_enable ;                                                                                                 ;
++--------------------------------------------------------------------------------------+--------------------------------+-------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 116   ;
+; Number of registers using Synchronous Clear  ; 29    ;
+; Number of registers using Synchronous Load   ; 1     ;
+; Number of registers using Asynchronous Clear ; 116   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 56    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |pr_115_lcd_top|lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_itf:i_lcd_cfah_itf_0|s_wdata[1]                         ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |pr_115_lcd_top|lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_itf:i_lcd_cfah_itf_0|s_cnt[1]                           ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |pr_115_lcd_top|lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_init:i_lcd_cfah_init_0|s_duration_cnt[21]               ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |pr_115_lcd_top|lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_cmd_generator:i_lcd_cfah_cmd_generator_0|o_lcd_wdata[1] ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |pr_115_lcd_top|lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_init:i_lcd_cfah_init_0|s_duration_max[19]               ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |pr_115_lcd_top|lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_cmd_generator:i_lcd_cfah_cmd_generator_0|o_lcd_wdata[4] ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |pr_115_lcd_top|lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_itf:i_lcd_cfah_itf_0|o_lcd_wdata[0]                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lcd_cfah_top:i_lcd_cfah_top_0 ;
++----------------------+-------+---------------------------------------------+
+; Parameter Name       ; Value ; Type                                        ;
++----------------------+-------+---------------------------------------------+
+; g_clk_period_ns      ; 20    ; Signed Integer                              ;
+; g_bidir_sel_polarity ; '0'   ; Enumerated                                  ;
++----------------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_init:i_lcd_cfah_init_0 ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                              ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; g_clk_period   ; 20    ; Signed Integer                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_cmd_buffer:i_lcd_cfah_cmd_buffer_0 ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                          ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; g_nb_cmd       ; 11    ; Signed Integer                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_itf:i_lcd_cfah_itf_0 ;
++----------------------+-------+---------------------------------------------------------------------------+
+; Parameter Name       ; Value ; Type                                                                      ;
++----------------------+-------+---------------------------------------------------------------------------+
+; g_clk_period_ns      ; 20    ; Signed Integer                                                            ;
+; g_bidir_sel_polarity ; '0'   ; Enumerated                                                                ;
++----------------------+-------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_cmd_buffer:i_lcd_cfah_cmd_buffer_0"                            ;
++------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                   ; Type   ; Severity ; Details                                                                             ;
++------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; i_return_home          ; Input  ; Info     ; Stuck at GND                                                                        ;
+; i_id_sh                ; Input  ; Info     ; Stuck at GND                                                                        ;
+; i_cursor_display_shift ; Input  ; Info     ; Stuck at GND                                                                        ;
+; i_set_gcram_addr       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; i_set_ddram_addr       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; i_wr_data              ; Input  ; Info     ; Stuck at GND                                                                        ;
+; i_rd_data              ; Input  ; Info     ; Stuck at GND                                                                        ;
+; i_data_bus             ; Input  ; Info     ; Stuck at GND                                                                        ;
+; o_lcd_rdata            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_polling_busy:i_lcd_cfah_polling_busy_0" ;
++-----------------+-------+----------+----------------------------------------------------------------------+
+; Port            ; Type  ; Severity ; Details                                                              ;
++-----------------+-------+----------+----------------------------------------------------------------------+
+; i_lcd_busy_flag ; Input ; Info     ; Stuck at GND                                                         ;
++-----------------+-------+----------+----------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_init:i_lcd_cfah_init_0"                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; o_init_done ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 21                          ;
+; cycloneiii_ff         ; 116                         ;
+;     CLR               ; 59                          ;
+;     CLR SLD           ; 1                           ;
+;     ENA CLR           ; 27                          ;
+;     ENA CLR SCLR      ; 29                          ;
+; cycloneiii_io_obuf    ; 8                           ;
+; cycloneiii_lcell_comb ; 134                         ;
+;     arith             ; 27                          ;
+;         2 data inputs ; 27                          ;
+;     normal            ; 107                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 21                          ;
+;         3 data inputs ; 31                          ;
+;         4 data inputs ; 49                          ;
+;                       ;                             ;
+; Max LUT depth         ; 7.00                        ;
+; Average LUT depth     ; 2.35                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:04     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Sun Dec  4 19:03:40 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LCD_pr_115_board -c LCD_pr_115_board
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file /home/linux-jp/Documents/GitHub/VHDL_code/PR_115/sources/lib_pr_115_lcd_top/pr_115_lcd_top.vhd
+    Info (12022): Found design unit 1: pr_115_lcd_top-rtl File: /home/linux-jp/Documents/GitHub/VHDL_code/PR_115/sources/lib_pr_115_lcd_top/pr_115_lcd_top.vhd Line: 56
+    Info (12023): Found entity 1: pr_115_lcd_top File: /home/linux-jp/Documents/GitHub/VHDL_code/PR_115/sources/lib_pr_115_lcd_top/pr_115_lcd_top.vhd Line: 33
+Info (12021): Found 2 design units, including 0 entities, in source file /home/linux-jp/Documents/GitHub/VHDL_code/PKG/sources/lib_pkg_utils/pkg_utils.vhd
+    Info (12022): Found design unit 1: pkg_utils File: /home/linux-jp/Documents/GitHub/VHDL_code/PKG/sources/lib_pkg_utils/pkg_utils.vhd Line: 5
+    Info (12022): Found design unit 2: pkg_utils-body File: /home/linux-jp/Documents/GitHub/VHDL_code/PKG/sources/lib_pkg_utils/pkg_utils.vhd Line: 13
+Info (12021): Found 2 design units, including 0 entities, in source file /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/pkg_lcd_cfah.vhd
+    Info (12022): Found design unit 1: pkg_lcd_cfah File: /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/pkg_lcd_cfah.vhd Line: 5
+    Info (12022): Found design unit 2: pkg_lcd_cfah-body File: /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/pkg_lcd_cfah.vhd Line: 231
+Info (12021): Found 2 design units, including 1 entities, in source file /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_top.vhd
+    Info (12022): Found design unit 1: lcd_cfah_top-rtl File: /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_top.vhd Line: 62
+    Info (12023): Found entity 1: lcd_cfah_top File: /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_top.vhd Line: 33
+Info (12021): Found 2 design units, including 1 entities, in source file /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_polling_busy.vhd
+    Info (12022): Found design unit 1: lcd_cfah_polling_busy-rtl File: /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_polling_busy.vhd Line: 27
+    Info (12023): Found entity 1: lcd_cfah_polling_busy File: /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_polling_busy.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_itf.vhd
+    Info (12022): Found design unit 1: lcd_cfah_itf-rtl File: /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_itf.vhd Line: 37
+    Info (12023): Found entity 1: lcd_cfah_itf File: /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_itf.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_init.vhd
+    Info (12022): Found design unit 1: lcd_cfah_init-rtl File: /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_init.vhd Line: 58
+    Info (12023): Found entity 1: lcd_cfah_init File: /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_init.vhd Line: 32
+Info (12021): Found 2 design units, including 1 entities, in source file /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_cmd_generator.vhd
+    Info (12022): Found design unit 1: lcd_cfah_cmd_generator-rtl File: /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_cmd_generator.vhd Line: 57
+    Info (12023): Found entity 1: lcd_cfah_cmd_generator File: /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_cmd_generator.vhd Line: 12
+Info (12021): Found 2 design units, including 1 entities, in source file /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_cmd_buffer.vhd
+    Info (12022): Found design unit 1: lcd_cfah_cmd_buffer-rtl File: /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_cmd_buffer.vhd Line: 91
+    Info (12023): Found entity 1: lcd_cfah_cmd_buffer File: /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_cmd_buffer.vhd Line: 37
+Info (12127): Elaborating entity "pr_115_lcd_top" for the top level hierarchy
+Info (12128): Elaborating entity "lcd_cfah_top" for hierarchy "lcd_cfah_top:i_lcd_cfah_top_0" File: /home/linux-jp/Documents/GitHub/VHDL_code/PR_115/sources/lib_pr_115_lcd_top/pr_115_lcd_top.vhd Line: 111
+Warning (10036): Verilog HDL or VHDL warning at lcd_cfah_top.vhd(70): object "s_init_done" assigned a value but never read File: /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_top.vhd Line: 70
+Warning (10541): VHDL Signal Declaration warning at lcd_cfah_top.vhd(71): used implicit default value for signal "s_start_init" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_top.vhd Line: 71
+Warning (10541): VHDL Signal Declaration warning at lcd_cfah_top.vhd(88): used implicit default value for signal "s_sc_rl_cmd_buffer" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_top.vhd Line: 88
+Warning (10541): VHDL Signal Declaration warning at lcd_cfah_top.vhd(105): used implicit default value for signal "s_lcd_data" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_top.vhd Line: 105
+Warning (10036): Verilog HDL or VHDL warning at lcd_cfah_top.vhd(110): object "s_lcd_rdata_cmd_buffer" assigned a value but never read File: /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_top.vhd Line: 110
+Info (12128): Elaborating entity "lcd_cfah_init" for hierarchy "lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_init:i_lcd_cfah_init_0" File: /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_top.vhd Line: 146
+Info (12128): Elaborating entity "lcd_cfah_polling_busy" for hierarchy "lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_polling_busy:i_lcd_cfah_polling_busy_0" File: /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_top.vhd Line: 165
+Info (12128): Elaborating entity "lcd_cfah_cmd_buffer" for hierarchy "lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_cmd_buffer:i_lcd_cfah_cmd_buffer_0" File: /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_top.vhd Line: 191
+Info (12128): Elaborating entity "lcd_cfah_cmd_generator" for hierarchy "lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_cmd_generator:i_lcd_cfah_cmd_generator_0" File: /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_top.vhd Line: 239
+Info (12128): Elaborating entity "lcd_cfah_itf" for hierarchy "lcd_cfah_top:i_lcd_cfah_top_0|lcd_cfah_itf:i_lcd_cfah_itf_0" File: /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_top.vhd Line: 275
+Warning (10036): Verilog HDL or VHDL warning at lcd_cfah_itf.vhd(55): object "s_rdata" assigned a value but never read File: /home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMCJP/sources/lib_CFAH1602/lcd_cfah_itf.vhd Line: 55
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "o_lcd_rs" is stuck at GND File: /home/linux-jp/Documents/GitHub/VHDL_code/PR_115/sources/lib_pr_115_lcd_top/pr_115_lcd_top.vhd Line: 49
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 9 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 190 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 9 input pins
+    Info (21059): Implemented 4 output pins
+    Info (21060): Implemented 8 bidirectional pins
+    Info (21061): Implemented 169 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 424 megabytes
+    Info: Processing ended: Sun Dec  4 19:04:02 2022
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:37
+
+

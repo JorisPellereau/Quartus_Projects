@@ -1,0 +1,89 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "o_lcd_rw",
+					"strict" : false
+				},
+				{
+					"name" : "o_lcd_en",
+					"strict" : false
+				},
+				{
+					"name" : "o_lcd_on",
+					"strict" : false
+				},
+				{
+					"name" : "io_lcd_data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "io_lcd_data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "io_lcd_data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "io_lcd_data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "io_lcd_data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "io_lcd_data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "io_lcd_data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "io_lcd_data[7]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "i_lcd_on",
+					"strict" : false
+				},
+				{
+					"name" : "i_dcb[0]",
+					"strict" : false
+				},
+				{
+					"name" : "i_dcb[1]",
+					"strict" : false
+				},
+				{
+					"name" : "i_dcb[2]",
+					"strict" : false
+				},
+				{
+					"name" : "i_dl_n_f[0]",
+					"strict" : false
+				},
+				{
+					"name" : "i_dl_n_f[1]",
+					"strict" : false
+				},
+				{
+					"name" : "i_dl_n_f[2]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
