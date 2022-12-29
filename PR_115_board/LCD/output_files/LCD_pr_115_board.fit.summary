@@ -1,15 +1,15 @@
-Fitter Status : Successful - Sun Dec  4 19:04:34 2022
+Fitter Status : Successful - Thu Dec 29 23:13:44 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : LCD_pr_115_board
 Top-level Entity Name : pr_115_lcd_top
 Family : Cyclone IV E
 Device : EP4CE115F29C7
 Timing Models : Final
-Total logic elements : 159 / 114,480 ( < 1 % )
-    Total combinational functions : 134 / 114,480 ( < 1 % )
-    Dedicated logic registers : 116 / 114,480 ( < 1 % )
-Total registers : 116
-Total pins : 21 / 529 ( 4 % )
+Total logic elements : 279 / 114,480 ( < 1 % )
+    Total combinational functions : 247 / 114,480 ( < 1 % )
+    Dedicated logic registers : 187 / 114,480 ( < 1 % )
+Total registers : 187
+Total pins : 38 / 529 ( 7 % )
 Total virtual pins : 0
 Total memory bits : 0 / 3,981,312 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 532 ( 0 % )

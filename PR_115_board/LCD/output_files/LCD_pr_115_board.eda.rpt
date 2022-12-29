@@ -1,5 +1,5 @@
 EDA Netlist Writer report for LCD_pr_115_board
-Sun Dec  4 19:04:49 2022
+Thu Dec 29 23:13:56 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sun Dec  4 19:04:49 2022 ;
+; EDA Netlist Writer Status ; Successful - Thu Dec 29 23:13:56 2022 ;
 ; Revision Name             ; LCD_pr_115_board                      ;
 ; Top-level Entity Name     ; pr_115_lcd_top                        ;
 ; Family                    ; Cyclone IV E                          ;
@@ -81,13 +81,13 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Dec  4 19:04:48 2022
+    Info: Processing started: Thu Dec 29 23:13:55 2022
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off LCD_pr_115_board -c LCD_pr_115_board
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file LCD_pr_115_board.vo in folder "/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/LCD/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 606 megabytes
-    Info: Processing ended: Sun Dec  4 19:04:49 2022
+    Info: Peak virtual memory: 605 megabytes
+    Info: Processing ended: Thu Dec 29 23:13:56 2022
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
