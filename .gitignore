@@ -4,3 +4,25 @@ UART_MAX7219_ctrl/db/
 UART_MAX7219_ctrl/output_files/
 
 UART_MAX7219_ctrl/incremental_db/
+
+PR_115_board/NIOS_LEDS/db/
+
+PR_115_board/NIOS_LEDS/incremental_db/
+
+PR_115_board/NIOS_LEDS/.qsys_edit/
+
+PR_115_board/NIOS_LEDS/simulation/
+
+PR_115_board/NIOS_LEDS/nios_leds_tb.csv
+
+PR_115_board/NIOS_LEDS/Eclipse_workspace/
+
+PR_115_board/NIOS_LEDS/nios_leds/Output/
+
+PR_115_board/LCD/db/
+
+PR_115_board/NIOS_LEDS/output_files/
+
+PR_115_board/NIOS_LEDS/nios_leds.qsf
+
+PR_115_board/NIOS_LEDS/nios_leds_tb.spd

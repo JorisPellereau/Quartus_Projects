@@ -1,0 +1,586 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/NIOS_LEDS/software/toto1/obj/default/runtime/sim/mentor
+vnios_leds_cpu_0_cpu
+Z1 !s110 1674836853
+!i10b 1
+!s100 3K[AfOQU6m74Xf9hBW<j03
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I0LJD_U_KnEQ_KDB]2@lhF3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1674835810
+Z5 8/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/NIOS_LEDS/nios_leds/Output/testbench/nios_leds_tb/simulation/submodules/nios_leds_cpu_0_cpu.v
+Z6 F/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/NIOS_LEDS/nios_leds/Output/testbench/nios_leds_tb/simulation/submodules/nios_leds_cpu_0_cpu.v
+!i122 38
+L0 2834 2824
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1674836853.000000
+Z9 !s107 /home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/NIOS_LEDS/nios_leds/Output/testbench/nios_leds_tb/simulation/submodules/nios_leds_cpu_0_cpu.v|
+Z10 !s90 -reportprogress|300|/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/NIOS_LEDS/nios_leds/Output/testbench/nios_leds_tb/simulation/submodules/nios_leds_cpu_0_cpu.v|-work|cpu|
+!i113 1
+Z11 o-work cpu
+Z12 tCvgOpt 0
+vnios_leds_cpu_0_cpu_debug_slave_sysclk
+R1
+!i10b 1
+!s100 o39helWJ3bOLT6nWZ>H9G1
+R2
+IVPYKHzZo7=R:1kZVfXYe:0
+R3
+R0
+R4
+8/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/NIOS_LEDS/nios_leds/Output/testbench/nios_leds_tb/simulation/submodules/nios_leds_cpu_0_cpu_debug_slave_sysclk.v
+F/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/NIOS_LEDS/nios_leds/Output/testbench/nios_leds_tb/simulation/submodules/nios_leds_cpu_0_cpu_debug_slave_sysclk.v
+!i122 36
+L0 21 141
+R7
+r1
+!s85 0
+31
+!s108 1674836852.000000
+!s107 /home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/NIOS_LEDS/nios_leds/Output/testbench/nios_leds_tb/simulation/submodules/nios_leds_cpu_0_cpu_debug_slave_sysclk.v|
+!s90 -reportprogress|300|/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/NIOS_LEDS/nios_leds/Output/testbench/nios_leds_tb/simulation/submodules/nios_leds_cpu_0_cpu_debug_slave_sysclk.v|-work|cpu|
+!i113 1
+R11
+R12
+vnios_leds_cpu_0_cpu_debug_slave_tck
+R1
+!i10b 1
+!s100 6A3nhBchn`OPe?TR2me_?3
+R2
+IdWIEIac8N8=SzRY1;NLl50
+R3
+R0
+R4
+8/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/NIOS_LEDS/nios_leds/Output/testbench/nios_leds_tb/simulation/submodules/nios_leds_cpu_0_cpu_debug_slave_tck.v
+F/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/NIOS_LEDS/nios_leds/Output/testbench/nios_leds_tb/simulation/submodules/nios_leds_cpu_0_cpu_debug_slave_tck.v
+!i122 39
+L0 21 218
+R7
+r1
+!s85 0
+31
+R8
+!s107 /home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/NIOS_LEDS/nios_leds/Output/testbench/nios_leds_tb/simulation/submodules/nios_leds_cpu_0_cpu_debug_slave_tck.v|
+!s90 -reportprogress|300|/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/NIOS_LEDS/nios_leds/Output/testbench/nios_leds_tb/simulation/submodules/nios_leds_cpu_0_cpu_debug_slave_tck.v|-work|cpu|
+!i113 1
+R11
+R12
+vnios_leds_cpu_0_cpu_debug_slave_wrapper
+!s110 1674836852
+!i10b 1
+!s100 oSLl`cnWfJ6`=kg8NP;@E1
+R2
+IfN>;jWf:;Mk]k1mm2ni`f1
+R3
+R0
+R4
+8/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/NIOS_LEDS/nios_leds/Output/testbench/nios_leds_tb/simulation/submodules/nios_leds_cpu_0_cpu_debug_slave_wrapper.v
+F/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/NIOS_LEDS/nios_leds/Output/testbench/nios_leds_tb/simulation/submodules/nios_leds_cpu_0_cpu_debug_slave_wrapper.v
+!i122 35
+L0 21 201
+R7
+r1
+!s85 0
+31
+!s108 1674836851.000000
+!s107 /home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/NIOS_LEDS/nios_leds/Output/testbench/nios_leds_tb/simulation/submodules/nios_leds_cpu_0_cpu_debug_slave_wrapper.v|
+!s90 -reportprogress|300|/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/NIOS_LEDS/nios_leds/Output/testbench/nios_leds_tb/simulation/submodules/nios_leds_cpu_0_cpu_debug_slave_wrapper.v|-work|cpu|
+!i113 1
+R11
+R12
+vnios_leds_cpu_0_cpu_nios2_avalon_reg
+R1
+!i10b 1
+!s100 [9X_N>PlMF_ScQlRn]63W2
+R2
+IB`R_<KBYfd1HGJPKUKb<[3
+R3
+R0
+R4
+R5
+R6
+!i122 38
+L0 2023 83
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+vnios_leds_cpu_0_cpu_nios2_oci
+R1
+!i10b 1
+!s100 a:dX2^09bR;[1Wb;@JGH;3
+R2
+IBC84iDF8YS5MijhDSIR:O0
+R3
+R0
+R4
+R5
+R6
+!i122 38
+L0 2362 462
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+vnios_leds_cpu_0_cpu_nios2_oci_break
+R1
+!i10b 1
+!s100 6B6D4Yzg0c@?`Qb7bCQRg3
+R2
+I_A7h6Y0AaB_m8[HPTK5hB1
+R3
+R0
+R4
+R5
+R6
+!i122 38
+L0 295 283
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+vnios_leds_cpu_0_cpu_nios2_oci_compute_input_tm_cnt
+R1
+!i10b 1
+!s100 leUO^TVgj;MaUM]N@>nLM3
+R2
+IUQ^N:L3S0Ln68bfWdI1>g3
+R3
+R0
+R4
+R5
+R6
+!i122 38
+L0 1265 62
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+vnios_leds_cpu_0_cpu_nios2_oci_dbrk
+R1
+!i10b 1
+!s100 ]CVJR8eSK[A:;`nYH:REX2
+R2
+IC8iZ]:CS_z^e]SZ>4Y1<c1
+R3
+R0
+R4
+R5
+R6
+!i122 38
+L0 795 177
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+vnios_leds_cpu_0_cpu_nios2_oci_debug
+R1
+!i10b 1
+!s100 ^7b<Vh<j67;0oFI2gWD;:1
+R2
+I19FVUi8Sk:Q14[PLFfoO70
+R3
+R0
+R4
+R5
+R6
+!i122 38
+L0 153 132
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+vnios_leds_cpu_0_cpu_nios2_oci_dtrace
+R1
+!i10b 1
+!s100 BzM<TCX<CiHJ0M>=jO]0a2
+R2
+Izh[5oe0aR=`aL^T78B_0C3
+R3
+R0
+R4
+R5
+R6
+!i122 38
+L0 1183 72
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+vnios_leds_cpu_0_cpu_nios2_oci_fifo
+R1
+!i10b 1
+!s100 XfTgWKRDaRY^;3^<b<nmM0
+R2
+I>E_;4j^fSJH3Q?j`YCIJM2
+R3
+R0
+R4
+R5
+R6
+!i122 38
+L0 1427 476
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+vnios_leds_cpu_0_cpu_nios2_oci_fifo_cnt_inc
+R1
+!i10b 1
+!s100 e[ccia8Toz9b0iZW8;OG;0
+R2
+I]5c^O;>gF]VmDMTS?BnOj2
+R3
+R0
+R4
+R5
+R6
+!i122 38
+L0 1380 37
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+vnios_leds_cpu_0_cpu_nios2_oci_fifo_wrptr_inc
+R1
+!i10b 1
+!s100 @;^AiQPYU<kYVMi?E:Dz:2
+R2
+IG6:fQeIKELB23i4g_;LS`2
+R3
+R0
+R4
+R5
+R6
+!i122 38
+L0 1337 33
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+vnios_leds_cpu_0_cpu_nios2_oci_im
+R1
+!i10b 1
+!s100 JP;4a7_oLZjl^j3OaY=>F1
+R2
+IYV=Wz<]ZOk=;RHLL@?d=n2
+R3
+R0
+R4
+R5
+R6
+!i122 38
+L0 1936 60
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+vnios_leds_cpu_0_cpu_nios2_oci_itrace
+R1
+!i10b 1
+!s100 gA`E0iP1m9d0?CWe8Liib0
+R2
+IlSY4aMdg3Zj7N9V0N@7VE0
+R3
+R0
+R4
+R5
+R6
+!i122 38
+L0 982 123
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+vnios_leds_cpu_0_cpu_nios2_oci_pib
+R1
+!i10b 1
+!s100 ;7S<:SY]Xm;fakgbSXUmh1
+R2
+Ie]?bPDkdnY9kNMl4dmSJn0
+R3
+R0
+R4
+R5
+R6
+!i122 38
+L0 1913 13
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+vnios_leds_cpu_0_cpu_nios2_oci_td_mode
+R1
+!i10b 1
+!s100 kI>AAZFcK<@C^eb3diT<P1
+R2
+IL0AkBcz5:5P7UPF6dH79E2
+R3
+R0
+R4
+R5
+R6
+!i122 38
+L0 1115 58
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+vnios_leds_cpu_0_cpu_nios2_oci_xbrk
+R1
+!i10b 1
+!s100 0W=PCG^5SDQ>ORgY1YO<c0
+R2
+IRJTY:ECKAeSl]<YHE1f711
+R3
+R0
+R4
+R5
+R6
+!i122 38
+L0 588 197
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+vnios_leds_cpu_0_cpu_nios2_ocimem
+R1
+!i10b 1
+!s100 K_L^@k`VD]fnVeTJWzD2L3
+R2
+I4[OKF_5T:>XgT99KSR@MO3
+R3
+R0
+R4
+R5
+R6
+!i122 38
+L0 2181 171
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+vnios_leds_cpu_0_cpu_nios2_performance_monitors
+R1
+!i10b 1
+!s100 WO2P>Sb:2oNC[NQ6V^PR`3
+R2
+I50BFS:gAOMzM@bzG?4IC12
+R3
+R0
+R4
+R5
+R6
+!i122 38
+L0 2006 7
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+vnios_leds_cpu_0_cpu_ociram_sp_ram_module
+R1
+!i10b 1
+!s100 j_>;8O7LcXR_CMF`0GHB@1
+R2
+IAB=AzJe<fUPd3cBjlUzak1
+R3
+R0
+R4
+R5
+R6
+!i122 38
+L0 2116 55
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+vnios_leds_cpu_0_cpu_register_bank_a_module
+R1
+!i10b 1
+!s100 fBAU0?BzO4n?z8KglTB:33
+R2
+IVzO7j<fWC>TLgh4]a_R_53
+R3
+R0
+R4
+R5
+R6
+!i122 38
+L0 21 56
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+vnios_leds_cpu_0_cpu_register_bank_b_module
+R1
+!i10b 1
+!s100 Ld`]]gWcogBanUl;?;9D52
+R2
+IlNK:@I?UMVjlkbDKOda973
+R3
+R0
+R4
+R5
+R6
+!i122 38
+L0 87 56
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+vnios_leds_cpu_0_cpu_test_bench
+R1
+!i10b 1
+!s100 C`Y_b:gi@]A?<]U>TL9`<2
+R2
+ID?>WIIBaY@1]3HP9n_ZBk2
+R3
+R0
+R4
+8/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/NIOS_LEDS/nios_leds/Output/testbench/nios_leds_tb/simulation/submodules/nios_leds_cpu_0_cpu_test_bench.v
+F/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/NIOS_LEDS/nios_leds/Output/testbench/nios_leds_tb/simulation/submodules/nios_leds_cpu_0_cpu_test_bench.v
+!i122 37
+L0 21 635
+R7
+r1
+!s85 0
+31
+R8
+!s107 /home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/NIOS_LEDS/nios_leds/Output/testbench/nios_leds_tb/simulation/submodules/nios_leds_cpu_0_cpu_test_bench.v|
+!s90 -reportprogress|300|/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/NIOS_LEDS/nios_leds/Output/testbench/nios_leds_tb/simulation/submodules/nios_leds_cpu_0_cpu_test_bench.v|-work|cpu|
+!i113 1
+R11
+R12

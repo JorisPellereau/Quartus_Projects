@@ -1,0 +1,8 @@
+	component nios_leds is
+		port (
+			clk_clk                                     : in  std_logic                    := 'X'; -- clk
+			pio_green_leds_0_external_connection_export : out std_logic_vector(8 downto 0);        -- export
+			reset_reset_n                               : in  std_logic                    := 'X'  -- reset_n
+		);
+	end component nios_leds;
+

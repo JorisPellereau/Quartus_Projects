@@ -1,0 +1,34 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/NIOS_LEDS/software/toto1/obj/default/runtime/sim/mentor
+vnios_leds
+!s110 1674836855
+!i10b 1
+!s100 W:EFFe;21O9``_BJRRfHa0
+!s11b Dg1SIo80bB@j0V0VzS_@n1
+I0U9GQ9nG<h7HQ0mHLHia<3
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1674835802
+8/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/NIOS_LEDS/nios_leds/Output/testbench/nios_leds_tb/simulation/submodules/nios_leds.v
+F/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/NIOS_LEDS/nios_leds/Output/testbench/nios_leds_tb/simulation/submodules/nios_leds.v
+!i122 7
+L0 6 232
+OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1674836855.000000
+!s107 /home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/NIOS_LEDS/nios_leds/Output/testbench/nios_leds_tb/simulation/submodules/nios_leds.v|
+!s90 -reportprogress|300|/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/NIOS_LEDS/nios_leds/Output/testbench/nios_leds_tb/simulation/submodules/nios_leds.v|-work|nios_leds_inst|
+!i113 1
+o-work nios_leds_inst
+tCvgOpt 0

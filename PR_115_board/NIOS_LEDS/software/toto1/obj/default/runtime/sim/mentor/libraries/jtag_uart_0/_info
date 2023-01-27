@@ -1,0 +1,126 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/NIOS_LEDS/software/toto1/obj/default/runtime/sim/mentor
+vnios_leds_jtag_uart_0
+Z1 !s110 1674836854
+!i10b 1
+!s100 jY5eblG6NT<_GPNObnjPG2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IZhciP13I_`d9aQaXhb3<31
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1674835803
+Z5 8/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/NIOS_LEDS/nios_leds/Output/testbench/nios_leds_tb/simulation/submodules/nios_leds_jtag_uart_0.v
+Z6 F/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/NIOS_LEDS/nios_leds/Output/testbench/nios_leds_tb/simulation/submodules/nios_leds_jtag_uart_0.v
+!i122 7
+L0 331 257
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1674836854.000000
+!s107 /home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/NIOS_LEDS/nios_leds/Output/testbench/nios_leds_tb/simulation/submodules/nios_leds_jtag_uart_0.v|
+Z9 !s90 -reportprogress|300|/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/NIOS_LEDS/nios_leds/Output/testbench/nios_leds_tb/simulation/submodules/nios_leds_jtag_uart_0.v|-work|jtag_uart_0|
+!i113 1
+Z10 o-work jtag_uart_0
+Z11 tCvgOpt 0
+vnios_leds_jtag_uart_0_scfifo_r
+R1
+!i10b 1
+!s100 fnT5n6_omkdGV<l9P3Khe1
+R2
+I>V8f0<PMH`f48TZ9g?aJP0
+R3
+R0
+R4
+R5
+R6
+!i122 7
+L0 243 78
+R7
+r1
+!s85 0
+31
+R8
+Z12 !s107 /home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/NIOS_LEDS/nios_leds/Output/testbench/nios_leds_tb/simulation/submodules/nios_leds_jtag_uart_0.v|
+R9
+!i113 1
+R10
+R11
+vnios_leds_jtag_uart_0_scfifo_w
+R1
+!i10b 1
+!s100 640]j]kEMd6`[?0lY4K@42
+R2
+I4ffIC8H3@MQ]6e1V2?20K1
+R3
+R0
+R4
+R5
+R6
+!i122 7
+L0 78 76
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 1
+R10
+R11
+vnios_leds_jtag_uart_0_sim_scfifo_r
+R1
+!i10b 1
+!s100 g8YagDR>l0fG[0dHCXL2;1
+R2
+IDVfORZzgdzG`<fgh::^of3
+R3
+R0
+R4
+R5
+R6
+!i122 7
+L0 164 69
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 1
+R10
+R11
+vnios_leds_jtag_uart_0_sim_scfifo_w
+R1
+!i10b 1
+!s100 4Y_zPMhDBOOCVBz9LY^aC1
+R2
+I>4P3nDEz:0IgHfMVIDiYL1
+R3
+R0
+R4
+R5
+R6
+!i122 7
+L0 21 47
+R7
+r1
+!s85 0
+31
+R8
+R12
+R9
+!i113 1
+R10
+R11

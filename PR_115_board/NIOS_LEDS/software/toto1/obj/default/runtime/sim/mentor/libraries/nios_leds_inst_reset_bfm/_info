@@ -1,0 +1,37 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/NIOS_LEDS/software/toto1/obj/default/runtime/sim/mentor
+valtera_avalon_reset_source
+DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+DXx25 altera_common_sv_packages 13 verbosity_pkg 0 22 kZXNNK?FdTE@VfhcLRXf;1
+!s110 1674836854
+!i10b 1
+!s100 4FSSIXCCKIi=2aY@O@W?F3
+!s11b Dg1SIo80bB@j0V0VzS_@n1
+I3Gh0lG?hDCK31WcnNf<Dl2
+VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1674835802
+8/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/NIOS_LEDS/nios_leds/Output/testbench/nios_leds_tb/simulation/submodules/altera_avalon_reset_source.sv
+F/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/NIOS_LEDS/nios_leds/Output/testbench/nios_leds_tb/simulation/submodules/altera_avalon_reset_source.sv
+!i122 7
+L0 23 79
+OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1674836854.000000
+!s107 /home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/NIOS_LEDS/nios_leds/Output/testbench/nios_leds_tb/simulation/submodules/altera_avalon_reset_source.sv|
+!s90 -reportprogress|300|-sv|/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/NIOS_LEDS/nios_leds/Output/testbench/nios_leds_tb/simulation/submodules/altera_avalon_reset_source.sv|-L|altera_common_sv_packages|-work|nios_leds_inst_reset_bfm|
+!i113 1
+o-sv -L altera_common_sv_packages -work nios_leds_inst_reset_bfm
+tCvgOpt 0
