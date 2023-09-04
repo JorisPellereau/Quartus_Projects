@@ -1,59 +1,59 @@
-Port,Direction,Pin Location,Bank,Standard,Pull-up,Drive [mA],Terminaison,Comment
-clk,in,Y2,B2,3.3V,NA,,NA,
-rst_n,in,G19,B7,2.5V,NA,,NA,
-o_seg0[0],out,G18,B7,2.5V,NA,4,,
-o_seg0[1],out,F22,B7,2.5V,NA,4,,
-o_seg0[2],out,E17,B7,2.5V,NA,4,,
-o_seg0[3],out,L26,B6,2.5V,NA,4,,JP7 configured in 2.5V on PR115 board
-o_seg0[4],out,L25,B6,2.5V,NA,4,,JP7 configured in 2.5V on PR115 board
-o_seg0[5],out,J22,B6,2.5V,NA,4,,JP7 configured in 2.5V on PR115 board
-o_seg0[6],out,H22,B6,2.5V,NA,4,,JP7 configured in 2.5V on PR115 board
-o_seg1[0],out,M24,B6,2.5V,NA,4,,JP7 configured in 2.5V on PR115 board
-o_seg1[1],out,Y22,B5,2.5V,NA,4,,JP7 configured in 2.5V on PR115 board
-o_seg1[2],out,W21,B5,2.5V,NA,4,,JP7 configured in 2.5V on PR115 board
-o_seg1[3],out,W22,B5,2.5V,NA,4,,JP7 configured in 2.5V on PR115 board
-o_seg1[4],out,W25,B5,2.5V,NA,4,,JP7 configured in 2.5V on PR115 board
-o_seg1[5],out,U23,B5,2.5V,NA,4,,JP7 configured in 2.5V on PR115 board
-o_seg1[6],out,U24,B5,2.5V,NA,4,,JP7 configured in 2.5V on PR115 board
-o_seg2[0],out,AA25,B5,2.5V,NA,4,,JP7 configured in 2.5V on PR115 board
-o_seg2[1],out,AA26,B5,2.5V,NA,4,,JP7 configured in 2.5V on PR115 board
-o_seg2[2],out,Y25,B5,2.5V,NA,4,,JP7 configured in 2.5V on PR115 board
-o_seg2[3],out,W26,B5,2.5V,NA,4,,JP7 configured in 2.5V on PR115 board
-o_seg2[4],out,Y26,B5,2.5V,NA,4,,JP7 configured in 2.5V on PR115 board
-o_seg2[5],out,W27,B5,2.5V,NA,4,,JP7 configured in 2.5V on PR115 board
-o_seg2[6],out,W28,B5,2.5V,NA,4,,JP7 configured in 2.5V on PR115 board
-o_seg3[0],out,V21,B5,2.5V,NA,4,,JP7 configured in 2.5V on PR115 board
-o_seg3[1],out,U21,B5,2.5V,NA,4,,JP7 configured in 2.5V on PR115 board
-o_seg3[2],out,AB20,B4,3.3V,NA,4,,JP6 configured in 3.3V on PR115 board
-o_seg3[3],out,AA21,B4,3.3V,NA,4,,JP6 configured in 3.3V on PR115 board
-o_seg3[4],out,AD24,B4,3.3V,NA,4,,JP6 configured in 3.3V on PR115 board
-o_seg3[5],out,AF23,B4,3.3V,NA,4,,JP6 configured in 3.3V on PR115 board
-o_seg3[6],out,Y19,B4,3.3V,NA,4,,JP6 configured in 3.3V on PR115 board
-o_seg4[0],out,AB19,B4,3.3V,NA,4,,JP6 configured in 3.3V on PR115 board
-o_seg4[1],out,AA19,B4,3.3V,NA,4,,JP6 configured in 3.3V on PR115 board
-o_seg4[2],out,AG21,B4,3.3V,NA,4,,JP6 configured in 3.3V on PR115 board
-o_seg4[3],out,AH21,B4,3.3V,NA,4,,JP6 configured in 3.3V on PR115 board
-o_seg4[4],out,AE19,B4,3.3V,NA,4,,JP6 configured in 3.3V on PR115 board
-o_seg4[5],out,AF19,B4,3.3V,NA,4,,JP6 configured in 3.3V on PR115 board
-o_seg4[6],out,AE18,B4,3.3V,NA,4,,JP6 configured in 3.3V on PR115 board
-o_seg5[0],out,AD18,B4,3.3V,NA,4,,JP6 configured in 3.3V on PR115 board
-o_seg5[1],out,AC18,B4,3.3V,NA,4,,JP6 configured in 3.3V on PR115 board
-o_seg5[2],out,AB18,B4,3.3V,NA,4,,JP6 configured in 3.3V on PR115 board
-o_seg5[3],out,AH19,B4,3.3V,NA,4,,JP6 configured in 3.3V on PR115 board
-o_seg5[4],out,AG19,B4,3.3V,NA,4,,JP6 configured in 3.3V on PR115 board
-o_seg5[5],out,AF18,B4,3.3V,NA,4,,JP6 configured in 3.3V on PR115 board
-o_seg5[6],out,AH18,B4,3.3V,NA,4,,JP6 configured in 3.3V on PR115 board
-o_seg6[0],out,AA17,B4,3.3V,NA,4,,JP6 configured in 3.3V on PR115 board
-o_seg6[1],out,AB16,B4,3.3V,NA,4,,JP6 configured in 3.3V on PR115 board
-o_seg6[2],out,AA16,B4,3.3V,NA,4,,JP6 configured in 3.3V on PR115 board
-o_seg6[3],out,AB17,B4,3.3V,NA,4,,JP6 configured in 3.3V on PR115 board
-o_seg6[4],out,AB15,B4,3.3V,NA,4,,JP6 configured in 3.3V on PR115 board
-o_seg6[5],out,AA15,B4,3.3V,NA,4,,JP6 configured in 3.3V on PR115 board
-o_seg6[6],out,AC17,B4,3.3V,NA,4,,JP6 configured in 3.3V on PR115 board
-o_seg7[0],out,AD17,B4,3.3V,NA,4,,JP6 configured in 3.3V on PR115 board
-o_seg7[1],out,AE17,B4,3.3V,NA,4,,JP6 configured in 3.3V on PR115 board
-o_seg7[2],out,AG17,B4,3.3V,NA,4,,JP6 configured in 3.3V on PR115 board
-o_seg7[3],out,AH17,B4,3.3V,NA,4,,JP6 configured in 3.3V on PR115 board
-o_seg7[4],out,AF17,B4,3.3V,NA,4,,JP6 configured in 3.3V on PR115 board
-o_seg7[5],out,AG18,B4,3.3V,NA,4,,JP6 configured in 3.3V on PR115 board
-o_seg7[6],out,AA14,B3,3.3V,NA,4,,
+Port,Direction,Pin Location,Bank,Standard,Pull-up,Drive [mA],Slew Rate,Terminaison,Comment
+clk,in,Y2,B2,3.3-V LVTTL,NA,NA,NA,NA,
+rst_n,in,M23,B7,2.5 V,NA,NA,NA,NA,JP7 configured in 2.5 V on PR115 board
+o_seg0[0],out,G18,B7,2.5 V,NA,4mA,2,,
+o_seg0[1],out,F22,B7,2.5 V,NA,4mA,2,,
+o_seg0[2],out,E17,B7,2.5 V,NA,4mA,2,,
+o_seg0[3],out,L26,B6,2.5 V,NA,4mA,2,,JP7 configured in 2.5 V on PR115 board
+o_seg0[4],out,L25,B6,2.5 V,NA,4mA,2,,JP7 configured in 2.5 V on PR115 board
+o_seg0[5],out,J22,B6,2.5 V,NA,4mA,2,,JP7 configured in 2.5 V on PR115 board
+o_seg0[6],out,H22,B6,2.5 V,NA,4mA,2,,JP7 configured in 2.5 V on PR115 board
+o_seg1[0],out,M24,B6,2.5 V,NA,4mA,2,,JP7 configured in 2.5 V on PR115 board
+o_seg1[1],out,Y22,B5,2.5 V,NA,4mA,2,,JP7 configured in 2.5 V on PR115 board
+o_seg1[2],out,W21,B5,2.5 V,NA,4mA,2,,JP7 configured in 2.5 V on PR115 board
+o_seg1[3],out,W22,B5,2.5 V,NA,4mA,2,,JP7 configured in 2.5 V on PR115 board
+o_seg1[4],out,W25,B5,2.5 V,NA,4mA,2,,JP7 configured in 2.5 V on PR115 board
+o_seg1[5],out,U23,B5,2.5 V,NA,4mA,2,,JP7 configured in 2.5 V on PR115 board
+o_seg1[6],out,U24,B5,2.5 V,NA,4mA,2,,JP7 configured in 2.5 V on PR115 board
+o_seg2[0],out,AA25,B5,2.5 V,NA,4mA,2,,JP7 configured in 2.5 V on PR115 board
+o_seg2[1],out,AA26,B5,2.5 V,NA,4mA,2,,JP7 configured in 2.5 V on PR115 board
+o_seg2[2],out,Y25,B5,2.5 V,NA,4mA,2,,JP7 configured in 2.5 V on PR115 board
+o_seg2[3],out,W26,B5,2.5 V,NA,4mA,2,,JP7 configured in 2.5 V on PR115 board
+o_seg2[4],out,Y26,B5,2.5 V,NA,4mA,2,,JP7 configured in 2.5 V on PR115 board
+o_seg2[5],out,W27,B5,2.5 V,NA,4mA,2,,JP7 configured in 2.5 V on PR115 board
+o_seg2[6],out,W28,B5,2.5 V,NA,4mA,2,,JP7 configured in 2.5 V on PR115 board
+o_seg3[0],out,V21,B5,2.5 V,NA,4mA,2,,JP7 configured in 2.5 V on PR115 board
+o_seg3[1],out,U21,B5,2.5 V,NA,4mA,2,,JP7 configured in 2.5 V on PR115 board
+o_seg3[2],out,AB20,B4,3.3-V LVTTL,NA,4mA,2,,JP6 configured in 3.3-V LVTTL on PR115 board
+o_seg3[3],out,AA21,B4,3.3-V LVTTL,NA,4mA,2,,JP6 configured in 3.3-V LVTTL on PR115 board
+o_seg3[4],out,AD24,B4,3.3-V LVTTL,NA,4mA,2,,JP6 configured in 3.3-V LVTTL on PR115 board
+o_seg3[5],out,AF23,B4,3.3-V LVTTL,NA,4mA,2,,JP6 configured in 3.3-V LVTTL on PR115 board
+o_seg3[6],out,Y19,B4,3.3-V LVTTL,NA,4mA,2,,JP6 configured in 3.3-V LVTTL on PR115 board
+o_seg4[0],out,AB19,B4,3.3-V LVTTL,NA,4mA,2,,JP6 configured in 3.3-V LVTTL on PR115 board
+o_seg4[1],out,AA19,B4,3.3-V LVTTL,NA,4mA,2,,JP6 configured in 3.3-V LVTTL on PR115 board
+o_seg4[2],out,AG21,B4,3.3-V LVTTL,NA,4mA,2,,JP6 configured in 3.3-V LVTTL on PR115 board
+o_seg4[3],out,AH21,B4,3.3-V LVTTL,NA,4mA,2,,JP6 configured in 3.3-V LVTTL on PR115 board
+o_seg4[4],out,AE19,B4,3.3-V LVTTL,NA,4mA,2,,JP6 configured in 3.3-V LVTTL on PR115 board
+o_seg4[5],out,AF19,B4,3.3-V LVTTL,NA,4mA,2,,JP6 configured in 3.3-V LVTTL on PR115 board
+o_seg4[6],out,AE18,B4,3.3-V LVTTL,NA,4mA,2,,JP6 configured in 3.3-V LVTTL on PR115 board
+o_seg5[0],out,AD18,B4,3.3-V LVTTL,NA,4mA,2,,JP6 configured in 3.3-V LVTTL on PR115 board
+o_seg5[1],out,AC18,B4,3.3-V LVTTL,NA,4mA,2,,JP6 configured in 3.3-V LVTTL on PR115 board
+o_seg5[2],out,AB18,B4,3.3-V LVTTL,NA,4mA,2,,JP6 configured in 3.3-V LVTTL on PR115 board
+o_seg5[3],out,AH19,B4,3.3-V LVTTL,NA,4mA,2,,JP6 configured in 3.3-V LVTTL on PR115 board
+o_seg5[4],out,AG19,B4,3.3-V LVTTL,NA,4mA,2,,JP6 configured in 3.3-V LVTTL on PR115 board
+o_seg5[5],out,AF18,B4,3.3-V LVTTL,NA,4mA,2,,JP6 configured in 3.3-V LVTTL on PR115 board
+o_seg5[6],out,AH18,B4,3.3-V LVTTL,NA,4mA,2,,JP6 configured in 3.3-V LVTTL on PR115 board
+o_seg6[0],out,AA17,B4,3.3-V LVTTL,NA,4mA,2,,JP6 configured in 3.3-V LVTTL on PR115 board
+o_seg6[1],out,AB16,B4,3.3-V LVTTL,NA,4mA,2,,JP6 configured in 3.3-V LVTTL on PR115 board
+o_seg6[2],out,AA16,B4,3.3-V LVTTL,NA,4mA,2,,JP6 configured in 3.3-V LVTTL on PR115 board
+o_seg6[3],out,AB17,B4,3.3-V LVTTL,NA,4mA,2,,JP6 configured in 3.3-V LVTTL on PR115 board
+o_seg6[4],out,AB15,B4,3.3-V LVTTL,NA,4mA,2,,JP6 configured in 3.3-V LVTTL on PR115 board
+o_seg6[5],out,AA15,B4,3.3-V LVTTL,NA,4mA,2,,JP6 configured in 3.3-V LVTTL on PR115 board
+o_seg6[6],out,AC17,B4,3.3-V LVTTL,NA,4mA,2,,JP6 configured in 3.3-V LVTTL on PR115 board
+o_seg7[0],out,AD17,B4,3.3-V LVTTL,NA,4mA,2,,JP6 configured in 3.3-V LVTTL on PR115 board
+o_seg7[1],out,AE17,B4,3.3-V LVTTL,NA,4mA,2,,JP6 configured in 3.3-V LVTTL on PR115 board
+o_seg7[2],out,AG17,B4,3.3-V LVTTL,NA,4mA,2,,JP6 configured in 3.3-V LVTTL on PR115 board
+o_seg7[3],out,AH17,B4,3.3-V LVTTL,NA,4mA,2,,JP6 configured in 3.3-V LVTTL on PR115 board
+o_seg7[4],out,AF17,B4,3.3-V LVTTL,NA,4mA,2,,JP6 configured in 3.3-V LVTTL on PR115 board
+o_seg7[5],out,AG18,B4,3.3-V LVTTL,NA,4mA,2,,JP6 configured in 3.3-V LVTTL on PR115 board
+o_seg7[6],out,AA14,B3,3.3-V LVTTL,NA,4mA,2,,

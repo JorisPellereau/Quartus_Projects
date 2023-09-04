@@ -1,17 +1,25 @@
 #**************************************************************
-# This .sbc file is created by Terasic Tool.
-# Users are recommended to modify this file to match users logic.
+# 
+# 
 #**************************************************************
 
 #**************************************************************
 # Create Clock
 #**************************************************************
+
+# Input clock from Oscillator 50MHz on the PR_115 board
 create_clock -period 20 [get_ports clk]
 
+# JTAG CLOCK - 10MHz (T=100ns)
+#create_clock -name tck -period 100 [get_ports altera_reserved_tck]
+
+#create_clock -period 10MHz {altera_reserved_tck}
+#set_clock_groups -asynchronous -group {altera_reserved_tck}
 
 #**************************************************************
 # Create Generated Clock
 #**************************************************************
+#create_generated_clock 
 #derive_pll_clocks
 
 
@@ -25,14 +33,14 @@ create_clock -period 20 [get_ports clk]
 #**************************************************************
 # Set Clock Uncertainty
 #**************************************************************
-#derive_clock_uncertainty
+derive_clock_uncertainty
 
 
 
 #**************************************************************
 # Set Input Delay
 #**************************************************************
-
+#set_input_delay -clock {altera_reserced_tck} 20 [get_ports altera_reserved_tdi]
 
 
 #**************************************************************
@@ -50,7 +58,7 @@ create_clock -period 20 [get_ports clk]
 #**************************************************************
 # Set False Path
 #**************************************************************
-
+# TBD !
 
 
 #**************************************************************

@@ -19,7 +19,7 @@ Q_PROJECT_PATH=/home/linux-jp/QUARTUS_PROJECTS
 
 #
 pinout_file=../pinout/jtag_7seg_pinout.csv
-pin_assig_file=jtag_7seg_pin_assigment.tcl
+pin_assig_file=jtag_7seg_pin_assignment.tcl
 # QPROJECT Configuration
 
 
@@ -29,7 +29,7 @@ DEVICE=EP4CE115F29C7
 TOP_ENTITY=jtag_7seg_top
 
 EN_SH_SCRIPT=ON
-SH_SCRIPT=jtag_7seg_pin_assignments.tcl
+SH_SCRIPT=/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/JTAG/JTAG_7SEG/scripts/$(pin_assig_file)
 
 all:
 	@echo ""
@@ -49,6 +49,8 @@ DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/PR_115/sources/lib_s
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/PR_115/sources/lib_seg7/seg7x8.vhd
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/RESET/sources/reset_gen.vhd
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/JTAG/JTAG_7SEG/ip_jtag/altera_vjtag/synthesis/altera_vjtag.vhd
+DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/PKG/sources/lib_pkg_utils/pkg_utils.vhd
+DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/UTILS/sources/lib_pulse_extender/bit_extender.vhd
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/Intel/JTAG/sources/lib_jtag_intel/vjtag_intf.vhd
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/AXI/AXI4_Lite/sources/lib_axi4_lite/axi4_lite_master.vhd
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/AXI/AXI4_Lite/sources/lib_axi4_lite/axi4_lite_slave_itf.vhd
@@ -71,7 +73,7 @@ SYNTH_SRC_LIST=$(DESIGN_FILE_LIST)
 
 
 
-# -- FIT Confiruations --
+# -- FIT Configurations --
 
 EARLY_TIMING_ESTIMATE=realistic
 FIT_EFFORT=auto
@@ -83,12 +85,10 @@ PACK_REGISTER=auto
 SEED=1
 TCO_TIME=10 ns
 TDC=ON
-TPD_TIME=10 ns
-TSU_TIME=10 ns
+#TPD_TIME=10 ns
+#TSU_TIME=10 ns
 #CHECK_NETLIST=ON
 
-fit_test:
-	make qfit
 
 READ_SETTINGS_FILES=off
 
@@ -97,7 +97,7 @@ asm_test:
 
 MODEL=slow
 MULTICORNER=ON
-SDC_FILE=/home/linux-jp/Documents/GitHub/VHDL_code/MISC/scripts/synth_blocks.sdc
+SDC_FILE=/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/JTAG/JTAG_7SEG/scripts/jtag_7seg_top_constraints.sdc
 SPEED=7
 TEMPERATURE_IN_C=25
 #
@@ -141,7 +141,7 @@ create_project_file:
 
 # Create PIN Assigment configuration file
 create_pin_assigment_file:
-	python3 $(INTEL_TOOL_PATH)/intel_tools.py --create_setup_file $(Q_PROJECT_NAME) $(pinout_file) $(pin_assig_file)
+	python3 $(INTEL_TOOL_PATH)/intel_tools.py --create_setup_file $(Q_PROJECT_NAME) $(pinout_file) $(pin_assig_file) $(SDC_FILE)
 
 
 # Remove project file
@@ -151,8 +151,11 @@ clean_project:
 
 build_project: clean_project create_project_file create_pin_assigment_file
 	make qsh
-	echo $(SYNTH_SRC_LIST)
+	make qsh_script
 	make qmap
-
+	make qfit
+	make qsta_post_map
+	make get_map_error_warn
+	make get_fit_error_warn
 
 
