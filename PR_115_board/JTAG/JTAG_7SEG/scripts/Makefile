@@ -89,12 +89,19 @@ TDC=ON
 #TSU_TIME=10 ns
 #CHECK_NETLIST=ON
 
+# -- ASM Configuration (Bitstream generation)
+READ_SETTINGS_FILES=on
 
-READ_SETTINGS_FILES=off
 
-asm_test:
-	make qasm
+# -- PROGRAMMATION Configuration --
+CABLE_NAME="USB-Blaster [3-2]"
+PROGRAMMING_MODE=JTAG
+PROGRAMMING_OPERATION= $(Q_PROJECT_PATH)/$(TOP_ENTITY)/$(TOP_ENTITY).sof
 
+CUSTOM_PGM_ARGS=ON
+#PGM_ARGS=-c $(CABLE_NAME) -a
+PGM_ARGS=-c $(CABLE_NAME) -m JTAG 
+#-o $(TOP_ENTITY).sof
 MODEL=slow
 MULTICORNER=ON
 SDC_FILE=/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/JTAG/JTAG_7SEG/scripts/jtag_7seg_top_constraints.sdc
@@ -122,12 +129,7 @@ tan_test:
 	make qtan
 
 
-all_flow:
-	rm -r /home/linux-jp/QUARTUS_PROJECTS/tests/*
-	make sh_test
-	make sh_script_test
-	make map_test
-	make fit_test
+
 
 
 # Create the folder and the project
@@ -157,5 +159,20 @@ build_project: clean_project create_project_file create_pin_assigment_file
 	make qsta_post_map
 	make get_map_error_warn
 	make get_fit_error_warn
+
+# Make bitstream
+build_bitsteam:
+	make qasm
+
+CPF_ARGS=-c -d $(TOP_ENTITY).sof $(TOP_ENTITY).pof
+
+conv_sof2pof:
+	make qcpf 
+
+load_bitstream:
+	make qpgm
+
+get_device:
+	make qpgm 
 
 
