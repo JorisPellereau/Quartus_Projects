@@ -1,0 +1,50 @@
+Info: Starting: Create simulation model
+Info: qsys-generate /home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/JTAG/JTAG_7SEG/ip_jtag/altera_vjtag_24ir.qsys --simulation=VHDL --allow-mixed-language-simulation --output-directory=/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/JTAG/JTAG_7SEG/ip_jtag/altera_vjtag_24ir/simulation --family="Cyclone IV E" --part=EP4CE10E22A7
+Progress: Loading ip_jtag/altera_vjtag_24ir.qsys
+Progress: Reading input file
+Progress: Adding virtual_jtag_0 [altera_virtual_jtag 20.1]
+Progress: Parameterizing module virtual_jtag_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: altera_vjtag_24ir: Generating altera_vjtag_24ir "altera_vjtag_24ir" for SIM_VHDL
+Info: virtual_jtag_0: "altera_vjtag_24ir" instantiated altera_virtual_jtag "virtual_jtag_0"
+Info: altera_vjtag_24ir: Done "altera_vjtag_24ir" with 2 modules, 2 files
+Info: qsys-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd=/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/JTAG/JTAG_7SEG/ip_jtag/altera_vjtag_24ir/altera_vjtag_24ir.spd --output-directory=/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/JTAG/JTAG_7SEG/ip_jtag/altera_vjtag_24ir/simulation/ --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/JTAG/JTAG_7SEG/ip_jtag/altera_vjtag_24ir/altera_vjtag_24ir.spd --output-directory=/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/JTAG/JTAG_7SEG/ip_jtag/altera_vjtag_24ir/simulation/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in /home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/JTAG/JTAG_7SEG/ip_jtag/altera_vjtag_24ir/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Skipping VCS script generation since VHDL file $QUARTUS_INSTALL_DIR/eda/sim_lib/altera_syn_attributes.vhd is required for simulation
+Info: Generating the following file(s) for VCSMX simulator in /home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/JTAG/JTAG_7SEG/ip_jtag/altera_vjtag_24ir/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in /home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/JTAG/JTAG_7SEG/ip_jtag/altera_vjtag_24ir/simulation/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	1 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in /home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/JTAG/JTAG_7SEG/ip_jtag/altera_vjtag_24ir/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under /home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/JTAG/JTAG_7SEG/ip_jtag/altera_vjtag_24ir/simulation/.
+Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: Finished: Create Modelsim Project.
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate /home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/JTAG/JTAG_7SEG/ip_jtag/altera_vjtag_24ir.qsys --synthesis=VHDL --output-directory=/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/JTAG/JTAG_7SEG/ip_jtag/altera_vjtag_24ir/synthesis --family="Cyclone IV E" --part=EP4CE10E22A7
+Progress: Loading ip_jtag/altera_vjtag_24ir.qsys
+Progress: Reading input file
+Progress: Adding virtual_jtag_0 [altera_virtual_jtag 20.1]
+Progress: Parameterizing module virtual_jtag_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: altera_vjtag_24ir: Generating altera_vjtag_24ir "altera_vjtag_24ir" for QUARTUS_SYNTH
+Info: virtual_jtag_0: "altera_vjtag_24ir" instantiated altera_virtual_jtag "virtual_jtag_0"
+Info: altera_vjtag_24ir: Done "altera_vjtag_24ir" with 2 modules, 1 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

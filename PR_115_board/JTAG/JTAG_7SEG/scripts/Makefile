@@ -49,6 +49,7 @@ DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/PR_115/sources/lib_s
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/PR_115/sources/lib_seg7/seg7x8.vhd
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/RESET/sources/reset_gen.vhd
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/JTAG/JTAG_7SEG/ip_jtag/altera_vjtag/synthesis/altera_vjtag.vhd
+DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/JTAG/JTAG_7SEG/ip_jtag/altera_vjtag_24ir/synthesis/altera_vjtag_24ir.vhd
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/PKG/sources/lib_pkg_utils/pkg_utils.vhd
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/UTILS/sources/lib_pulse_extender/bit_extender.vhd
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/Intel/JTAG/sources/lib_jtag_intel/vjtag_intf.vhd
@@ -142,8 +143,13 @@ create_project_file:
 
 
 # Create PIN Assigment configuration file
+CUSTOM_CMD?=
+
+# Use in order to use le virtual jtag with 24 IR width
+#CUSTOM_CMD="set_parameter -entity jtag_7seg_top -name SEL_ALTERA_VJTAG True"
+
 create_pin_assigment_file:
-	python3 $(INTEL_TOOL_PATH)/intel_tools.py --create_setup_file $(Q_PROJECT_NAME) $(pinout_file) $(pin_assig_file) $(SDC_FILE)
+	python3 $(INTEL_TOOL_PATH)/intel_tools.py --create_setup_file $(Q_PROJECT_NAME) $(pinout_file) $(pin_assig_file) $(SDC_FILE) $(CUSTOM_CMD)
 
 
 # Remove project file
