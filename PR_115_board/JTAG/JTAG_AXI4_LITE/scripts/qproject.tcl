@@ -1,0 +1,3 @@
+project_new -family CYCLONEIVE -revision REV0 jtag_7seg_top
+export_assignments
+project_close
