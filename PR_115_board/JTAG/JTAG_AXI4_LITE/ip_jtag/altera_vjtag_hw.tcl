@@ -21,7 +21,7 @@ proc compose { } {
     set_instance_parameter_value virtual_jtag_0 {CREATE_PRIMITIVE_JTAG_STATE_SIGNAL_PORTS} {0}
     set_instance_parameter_value virtual_jtag_0 {gui_use_auto_index} {0}
     set_instance_parameter_value virtual_jtag_0 {sld_instance_index} {0}
-    set_instance_parameter_value virtual_jtag_0 {sld_ir_width} {6}
+    set_instance_parameter_value virtual_jtag_0 {sld_ir_width} {8}
 
     # connections and connection parameters
     # exported interfaces

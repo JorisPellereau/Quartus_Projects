@@ -26,10 +26,10 @@ pin_assig_file=jtag_axi4_lite_top_pin_assignment.tcl
 REVISION=REV0
 FAMILY=CYCLONEIV
 DEVICE=EP4CE115F29C7
-TOP_ENTITY=jtag_7seg_top
+TOP_ENTITY=jtag_axi4_lite_top
 
 EN_SH_SCRIPT=ON
-SH_SCRIPT=/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/JTAG/JTAG_7SEG/scripts/$(pin_assig_file)
+SH_SCRIPT=/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/JTAG/JTAG_AXI4_LITE/scripts/$(pin_assig_file)
 
 all:
 	@echo ""
@@ -103,6 +103,7 @@ DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/AXI/AXI4_Lite/source
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/AXI/AXI4_Lite/sources/lib_axi4_lite_lcd/axi4_lite_lcd.vhd
 
 # TOP
+DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/PR_115/sources/lib_jtag_axi4_lite_top/pkg_jtag_axi4_lite_top.vhd
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/PR_115/sources/lib_jtag_axi4_lite_top/jtag_axi4_lite_core.vhd
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/PR_115/sources/lib_jtag_axi4_lite_top/jtag_axi4_lite_top.vhd
 
@@ -152,7 +153,7 @@ PGM_ARGS=-c $(CABLE_NAME) -m JTAG
 #-o $(TOP_ENTITY).sof
 MODEL=slow
 MULTICORNER=ON
-SDC_FILE=/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/JTAG/JTAG_7SEG/scripts/jtag_axi4_lite_top_constraints.sdc
+SDC_FILE=/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/JTAG/JTAG_AXI4_LITE/scripts/jtag_axi4_lite_top_constraints.sdc
 SPEED=7
 TEMPERATURE_IN_C=25
 #

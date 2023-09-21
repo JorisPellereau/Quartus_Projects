@@ -1,4 +1,4 @@
-project_new jtag_7seg_top -overwrite
+project_new jtag_axi4_lite_top -overwrite
 # Set Pin Location
 set_location_assignment PIN_Y2 -to clk
 set_location_assignment PIN_M23 -to rst_n
@@ -85,6 +85,18 @@ set_location_assignment PIN_G20 -to ledg[5]
 set_location_assignment PIN_G22 -to ledg[6]
 set_location_assignment PIN_G21 -to ledg[7]
 set_location_assignment PIN_F17 -to ledg[8]
+set_location_assignment PIN_L3 -to io_lcd_data[0]
+set_location_assignment PIN_L1 -to io_lcd_data[1]
+set_location_assignment PIN_L2 -to io_lcd_data[2]
+set_location_assignment PIN_K7 -to io_lcd_data[3]
+set_location_assignment PIN_K1 -to io_lcd_data[4]
+set_location_assignment PIN_K2 -to io_lcd_data[5]
+set_location_assignment PIN_M3 -to io_lcd_data[6]
+set_location_assignment PIN_M5 -to io_lcd_data[7]
+set_location_assignment PIN_M1 -to o_lcd_rw
+set_location_assignment PIN_L4 -to o_lcd_en
+set_location_assignment PIN_M2 -to o_lcd_rs
+set_location_assignment PIN_L5 -to o_lcd_on
 
 # Set IO STANDARD
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk
@@ -172,6 +184,18 @@ set_instance_assignment -name IO_STANDARD "2.5 V" -to ledg[5]
 set_instance_assignment -name IO_STANDARD "2.5 V" -to ledg[6]
 set_instance_assignment -name IO_STANDARD "2.5 V" -to ledg[7]
 set_instance_assignment -name IO_STANDARD "2.5 V" -to ledg[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to io_lcd_data[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to io_lcd_data[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to io_lcd_data[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to io_lcd_data[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to io_lcd_data[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to io_lcd_data[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to io_lcd_data[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to io_lcd_data[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to o_lcd_rw
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to o_lcd_en
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to o_lcd_rs
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to o_lcd_on
 
 # Set PULL UP
 
@@ -259,6 +283,18 @@ set_instance_assignment -name CURRENT_STRENGTH_NEW 4mA -to ledg[5]
 set_instance_assignment -name CURRENT_STRENGTH_NEW 4mA -to ledg[6]
 set_instance_assignment -name CURRENT_STRENGTH_NEW 4mA -to ledg[7]
 set_instance_assignment -name CURRENT_STRENGTH_NEW 4mA -to ledg[8]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4mA -to io_lcd_data[0]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4mA -to io_lcd_data[1]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4mA -to io_lcd_data[2]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4mA -to io_lcd_data[3]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4mA -to io_lcd_data[4]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4mA -to io_lcd_data[5]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4mA -to io_lcd_data[6]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4mA -to io_lcd_data[7]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4mA -to o_lcd_rw
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4mA -to o_lcd_en
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4mA -to o_lcd_rs
+set_instance_assignment -name CURRENT_STRENGTH_NEW 4mA -to o_lcd_on
 
 # Set SLEW RATE
 set_instance_assignment -name SLEW_RATE 2 -to o_seg0[0]
@@ -344,9 +380,21 @@ set_instance_assignment -name SLEW_RATE 2 -to ledg[5]
 set_instance_assignment -name SLEW_RATE 2 -to ledg[6]
 set_instance_assignment -name SLEW_RATE 2 -to ledg[7]
 set_instance_assignment -name SLEW_RATE 2 -to ledg[8]
+set_instance_assignment -name SLEW_RATE 2 -to io_lcd_data[0]
+set_instance_assignment -name SLEW_RATE 2 -to io_lcd_data[1]
+set_instance_assignment -name SLEW_RATE 2 -to io_lcd_data[2]
+set_instance_assignment -name SLEW_RATE 2 -to io_lcd_data[3]
+set_instance_assignment -name SLEW_RATE 2 -to io_lcd_data[4]
+set_instance_assignment -name SLEW_RATE 2 -to io_lcd_data[5]
+set_instance_assignment -name SLEW_RATE 2 -to io_lcd_data[6]
+set_instance_assignment -name SLEW_RATE 2 -to io_lcd_data[7]
+set_instance_assignment -name SLEW_RATE 2 -to o_lcd_rw
+set_instance_assignment -name SLEW_RATE 2 -to o_lcd_en
+set_instance_assignment -name SLEW_RATE 2 -to o_lcd_rs
+set_instance_assignment -name SLEW_RATE 2 -to o_lcd_on
 
 # Set SDC FILE
-set_global_assignment -name SDC_FILE /home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/JTAG/JTAG_7SEG/scripts/jtag_7seg_top_constraints.sdc
+set_global_assignment -name SDC_FILE /home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/JTAG/JTAG_AXI4_LITE/scripts/jtag_axi4_lite_top_constraints.sdc
 
 # CUSTOM Commands
 

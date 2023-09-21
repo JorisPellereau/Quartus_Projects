@@ -1,12 +1,12 @@
-# system info altera_vjtag on 2023.09.02.10:13:51
+# system info altera_vjtag on 2023.09.21.16:24:25
 system_info:
 name,value
 DEVICE,EP4CE10E22A7
 DEVICE_FAMILY,Cyclone IV E
-GENERATION_ID,1693642430
+GENERATION_ID,1695306265
 #
 #
-# Files generated for altera_vjtag on 2023.09.02.10:13:51
+# Files generated for altera_vjtag on 2023.09.21.16:24:25
 files:
 filepath,kind,attributes,module,is_top
 simulation/altera_vjtag.vhd,VHDL,,altera_vjtag,true

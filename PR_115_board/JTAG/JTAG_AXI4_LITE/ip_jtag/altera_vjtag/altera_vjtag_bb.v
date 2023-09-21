@@ -16,8 +16,8 @@ module altera_vjtag (
 
 	output		tdi;
 	input		tdo;
-	output	[5:0]	ir_in;
-	input	[5:0]	ir_out;
+	output	[7:0]	ir_in;
+	input	[7:0]	ir_out;
 	output		virtual_state_cdr;
 	output		virtual_state_sdr;
 	output		virtual_state_e1dr;
