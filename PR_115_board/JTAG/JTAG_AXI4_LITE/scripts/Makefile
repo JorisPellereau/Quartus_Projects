@@ -230,3 +230,10 @@ get_device:
 	make qpgm 
 
 
+# == RUN TCL TESTS ==
+
+SCN_PATH=../scenarios
+
+# make run_tcl_test TEST=
+run_tcl_test:
+	$(STP) -t $(SCN_PATH)/$(TEST).tcl
