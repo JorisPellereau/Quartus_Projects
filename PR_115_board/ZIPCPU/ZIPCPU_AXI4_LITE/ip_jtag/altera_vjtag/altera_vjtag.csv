@@ -1,18 +1,18 @@
-# system info altera_vjtag_24ir on 2023.09.06.11:40:43
+# system info altera_vjtag on 2023.09.21.16:24:25
 system_info:
 name,value
 DEVICE,EP4CE10E22A7
 DEVICE_FAMILY,Cyclone IV E
-GENERATION_ID,1693993242
+GENERATION_ID,1695306265
 #
 #
-# Files generated for altera_vjtag_24ir on 2023.09.06.11:40:43
+# Files generated for altera_vjtag on 2023.09.21.16:24:25
 files:
 filepath,kind,attributes,module,is_top
-simulation/altera_vjtag_24ir.vhd,VHDL,,altera_vjtag_24ir,true
+simulation/altera_vjtag.vhd,VHDL,,altera_vjtag,true
 simulation/submodules/sld_virtual_jtag.v,VERILOG,,sld_virtual_jtag,false
 #
 # Map from instance-path to kind of module
 instances:
 instancePath,module
-altera_vjtag_24ir.virtual_jtag_0,sld_virtual_jtag
+altera_vjtag.virtual_jtag_0,sld_virtual_jtag

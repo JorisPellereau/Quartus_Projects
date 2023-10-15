@@ -70,6 +70,7 @@ DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/FIFO/sources/lib_fif
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/FIFO/sources/lib_fifo_wrapper/fifo_sp_ram_wrapper.vhd
 
 # -- ROM
+DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/ROM/sources/lib_rom_intel/pkg_sp_rom.vhd
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/ROM/sources/lib_rom_intel/sp_rom.vhd
 
 
@@ -105,6 +106,12 @@ DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/AXI/AXI4_Lite/source
 # -- AXI4 Lite Memory (ROM)
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/AXI/AXI4_Lite/sources/lib_axi4_lite_memory/axi4_lite_rom_ctrl.vhd
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/AXI/AXI4_Lite/sources/lib_axi4_lite_memory/axi4_lite_memory.vhd
+
+# -- VJTAG Interface
+DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/Intel/JTAG/sources/lib_jtag_intel/vjtag_intf.vhd
+
+# -- ALTERA VJTAG
+DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/ZIPCPU/ZIPCPU_AXI4_LITE/ip_jtag/altera_vjtag/synthesis/altera_vjtag.vhd
 
 # -- ZIPCPU Sources
 

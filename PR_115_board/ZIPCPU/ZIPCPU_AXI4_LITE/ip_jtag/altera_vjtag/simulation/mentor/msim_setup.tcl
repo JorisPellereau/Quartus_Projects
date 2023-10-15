@@ -17,7 +17,7 @@
 # ----------------------------------------
 # This script provides commands to simulate the following IP detected in
 # your Quartus project:
-#     altera_vjtag_24ir
+#     altera_vjtag
 # 
 # Altera recommends that you source this Quartus-generated IP simulation
 # script from your own customized top-level script, and avoid editing this
@@ -83,7 +83,7 @@
 # 
 # IP SIMULATION SCRIPT
 # ----------------------------------------
-# If altera_vjtag_24ir is one of several IP cores in your
+# If altera_vjtag is one of several IP cores in your
 # Quartus project, you can generate a simulation script
 # suitable for inclusion in your top-level simulation
 # script by running the following command line:
@@ -94,7 +94,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 20.1 720 linux 2023.09.06.11:40:46
+# ACDS 20.1 720 linux 2023.09.21.16:24:26
 
 # ----------------------------------------
 # Initialize variables
@@ -105,7 +105,7 @@ if ![info exists SYSTEM_INSTANCE_NAME] {
 }
 
 if ![info exists TOP_LEVEL_NAME] { 
-  set TOP_LEVEL_NAME "altera_vjtag_24ir"
+  set TOP_LEVEL_NAME "altera_vjtag"
 }
 
 if ![info exists QSYS_SIMDIR] { 
@@ -214,7 +214,7 @@ alias dev_com {
 alias com {
   echo "\[exec\] com"
   eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/sld_virtual_jtag.v" -work virtual_jtag_0
-  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS    "$QSYS_SIMDIR/altera_vjtag_24ir.vhd"                             
+  eval  vcom $USER_DEFINED_VHDL_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS    "$QSYS_SIMDIR/altera_vjtag.vhd"                                  
 }
 
 # ----------------------------------------

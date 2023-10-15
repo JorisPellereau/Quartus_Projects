@@ -1,0 +1,28 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate /home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/JTAG/JTAG_AXI4_LITE/ip_jtag/altera_vjtag.qsys --block-symbol-file --output-directory=/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/JTAG/JTAG_AXI4_LITE/ip_jtag/altera_vjtag --family="Cyclone IV E" --part=EP4CE10E22A7
+Progress: Loading ip_jtag/altera_vjtag.qsys
+Progress: Reading input file
+Progress: Adding virtual_jtag_0 [altera_virtual_jtag 20.1]
+Progress: Parameterizing module virtual_jtag_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate /home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/JTAG/JTAG_AXI4_LITE/ip_jtag/altera_vjtag.qsys --synthesis=VHDL --output-directory=/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/JTAG/JTAG_AXI4_LITE/ip_jtag/altera_vjtag/synthesis --family="Cyclone IV E" --part=EP4CE10E22A7
+Progress: Loading ip_jtag/altera_vjtag.qsys
+Progress: Reading input file
+Progress: Adding virtual_jtag_0 [altera_virtual_jtag 20.1]
+Progress: Parameterizing module virtual_jtag_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: altera_vjtag: Generating altera_vjtag "altera_vjtag" for QUARTUS_SYNTH
+Info: virtual_jtag_0: "altera_vjtag" instantiated altera_virtual_jtag "virtual_jtag_0"
+Info: altera_vjtag: Done "altera_vjtag" with 2 modules, 1 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
