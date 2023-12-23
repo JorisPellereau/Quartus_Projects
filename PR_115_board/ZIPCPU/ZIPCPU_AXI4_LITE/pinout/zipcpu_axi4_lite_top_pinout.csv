@@ -96,3 +96,6 @@ o_lcd_rw,out,M1,B1,3.3-V LVTTL,NA,4mA,2,,
 o_lcd_en,out,L4,B1,3.3-V LVTTL,NA,4mA,2,,
 o_lcd_rs,out,M2,B1,3.3-V LVTTL,NA,4mA,2,,
 o_lcd_on,out,L5,B1,3.3-V LVTTL,NA,4mA,2,,
+o_max7219_clk,out,AC15,B4,3.3-V LVTTL,NA,4mA,2,,JP6 configured in 3.3-V LVTTL on PR115 board
+o_max7219_load,out,Y17,B4,3.3-V LVTTL,NA,4mA,2,,JP6 configured in 3.3-V LVTTL on PR115 board
+o_max7219_data,out,Y16,B4,3.3-V LVTTL,NA,4mA,2,,JP6 configured in 3.3-V LVTTL on PR115 board

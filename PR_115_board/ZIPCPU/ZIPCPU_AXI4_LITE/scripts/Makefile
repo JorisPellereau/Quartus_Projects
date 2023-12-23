@@ -61,7 +61,6 @@ DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/RESET/sources/reset_
 # -- Bit Extender
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/UTILS/sources/lib_pulse_extender/bit_extender.vhd
 
-
 # -- RAM INTEL
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/RAM/sources/lib_ram_intel/sp_ram.vhd
 
@@ -73,6 +72,11 @@ DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/FIFO/sources/lib_fif
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/ROM/sources/lib_rom_intel/pkg_sp_rom.vhd
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/ROM/sources/lib_rom_intel/sp_rom.vhd
 
+# -- MAX7219 Interface and Block
+DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/MAX7219/sources/lib_max7219_interface/max7219_if.vhd
+DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/MAX7219/sources/lib_max7219/start_max7219_if.vhd
+DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/MAX7219/sources/lib_max7219/wr_fifo_mngt.vhd
+DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/MAX7219/sources/lib_max7219/max7219_ctrl.vhd
 
 # -- AXI4 Lite
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/AXI/AXI4_Lite/sources/lib_axi4_lite/axi4_lite_master.vhd
@@ -102,6 +106,11 @@ DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMC
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/AXI/AXI4_Lite/sources/lib_axi4_lite_lcd/axi4_lite_lcd_pkg.vhd
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/AXI/AXI4_Lite/sources/lib_axi4_lite_lcd/axi4_lite_lcd_registers.vhd
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/AXI/AXI4_Lite/sources/lib_axi4_lite_lcd/axi4_lite_lcd.vhd
+
+# -- AXI4 Lite MAX7219
+DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/AXI/AXI4_Lite/sources/lib_axi4_lite_max7219/axi4_lite_max7219_pkg.vhd
+DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/AXI/AXI4_Lite/sources/lib_axi4_lite_max7219/axi4_lite_max7219_registers.vhd
+DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/AXI/AXI4_Lite/sources/lib_axi4_lite_max7219/axi4_lite_max7219.vhd
 
 # -- AXI4 Lite Memory (ROM)
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/AXI/AXI4_Lite/sources/lib_axi4_lite_memory/axi4_lite_rom_ctrl.vhd
@@ -269,6 +278,8 @@ CUSTOM_CMD?=
 # Use in order to use le virtual jtag with 24 IR width
 #CUSTOM_CMD="set_parameter -entity jtag_7seg_top -name SEL_ALTERA_VJTAG True"
 
+# Set a specific value to the ROM
+#CUSTOM_CMD="set_parameter -entity zipcpu_axi4_lite_core -name G_ROM_INIT A(B\"00010010000000010111111101010011\")"
 create_pin_assigment_file:
 	python3 $(INTEL_TOOL_PATH)/intel_tools.py --create_setup_file $(Q_PROJECT_NAME) $(pinout_file) $(pin_assig_file) $(SDC_FILE) $(CUSTOM_CMD)
 
