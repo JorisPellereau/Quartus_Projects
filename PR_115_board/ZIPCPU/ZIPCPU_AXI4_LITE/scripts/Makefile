@@ -15,7 +15,8 @@ INTEL_TOOL_PATH = /home/linux-jp/Documents/GitHub/Python/FPGA_environment
 QUARTUS_PATH=/opt/Quartus/Quartus_20_1_1_nios_eds/quartus/bin
 #Q_PROJECT_NAME=JTAG_7SEG
 Q_PROJECT_PATH=/home/linux-jp/QUARTUS_PROJECTS
-
+Q_PROJECT_NAME_SUFFIX=/$(ASM_FILE)
+FOLDER_PATH=$(Q_PROJECT_PATH)/$(TOP_ENTITY)/$(ASM_FILE)/$(TOP_ENTITY)
 
 #
 pinout_file=../pinout/zipcpu_axi4_lite_top_pinout.csv
@@ -29,7 +30,9 @@ DEVICE=EP4CE115F29C7
 TOP_ENTITY=zipcpu_axi4_lite_top
 
 EN_SH_SCRIPT=ON
-SH_SCRIPT=/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/ZIPCPU/ZIPCPU_AXI4_LITE/scripts/$(pin_assig_file)
+
+# SH Scripts Location
+SH_SCRIPT=$(Q_PROJECT_PATH)/$(TOP_ENTITY)/$(ASM_FILE)/$(pin_assig_file)
 
 all:
 	@echo ""
@@ -264,11 +267,13 @@ tan_test:
 
 
 # Create the folder and the project
+# A folder for each ROM file
+# the qproject.tcl file is located in the project folder
 create_project_file:
-	if [ ! -d $(Q_PROJECT_PATH)/$(TOP_ENTITY) ]; then \
-	  mkdir $(Q_PROJECT_PATH)/$(TOP_ENTITY); \
+	if [ ! -d $(Q_PROJECT_PATH)/$(TOP_ENTITY)/$(ASM_FILE) ]; then \
+	  mkdir $(Q_PROJECT_PATH)/$(TOP_ENTITY)/$(ASM_FILE); \
 	fi
-	python3 $(INTEL_TOOL_PATH)/intel_tools.py --create_project_file $(FAMILY) $(REVISION) $(Q_PROJECT_NAME) qproject.tcl
+	python3 $(INTEL_TOOL_PATH)/intel_tools.py --create_project_file $(FAMILY) $(REVISION) $(Q_PROJECT_NAME) $(Q_PROJECT_PATH)/$(TOP_ENTITY)/$(ASM_FILE)/qproject.tcl
 
 
 
@@ -278,25 +283,61 @@ CUSTOM_CMD?=
 # Use in order to use le virtual jtag with 24 IR width
 #CUSTOM_CMD="set_parameter -entity jtag_7seg_top -name SEL_ALTERA_VJTAG True"
 
-# Set a specific value to the ROM
-#CUSTOM_CMD="set_parameter -entity zipcpu_axi4_lite_core -name G_ROM_INIT A(B\"00010010000000010111111101010011\")"
+# Set a specific value to the ROM of the CORE
+#SET_ROM_INIT_CMD="set_parameter -entity zipcpu_axi4_lite_core -name G_ROM_INIT $(INIT_ROM_$(ASM_FILE))"
+#INIT_ROM_VAR=
+
+# If the file doesnt exists -> create -it
+add_include:
+	if [ ! -e  $(ASM_FILE).mk] ; then \
+		make update_g_rom_init; \
+-include $(ASM_FILE).mk
+	else \
+		rm $(ASM_FILE).mk; \
+		make update_g_rom_init; \
+-include $(ASM_FILE).mk
+	fi
+
+#st -f $(ASM_FILE).mk include $(ASM_FILE).mk
+
+
+ASM_FILE_PATH=/home/linux-jp/Documents/GitHub/VHDL_code/PR_115/scenarios/scn_lib_zipcpu_axi4_lite_top
+
+CUSTOM_CMD=$(INIT_ROM_$(ASM_FILE))
+#$(SET_ROM_INIT_CMD)
+#$($(INIT_ROM_VAR))
+
+# ASM_FILE must be defined
+# Create a .mk file with a variable which contains the content of the ROM to initialized
+update_g_rom_init:
+	python3 create_rom_init_mk_var.py $(ASM_FILE_PATH) $(ASM_FILE)
+
 create_pin_assigment_file:
-	python3 $(INTEL_TOOL_PATH)/intel_tools.py --create_setup_file $(Q_PROJECT_NAME) $(pinout_file) $(pin_assig_file) $(SDC_FILE) $(CUSTOM_CMD)
+	python3 $(INTEL_TOOL_PATH)/intel_tools.py --create_setup_file $(Q_PROJECT_NAME) $(pinout_file) $(Q_PROJECT_PATH)/$(TOP_ENTITY)/$(ASM_FILE)/$(pin_assig_file) $(SDC_FILE) $(CUSTOM_CMD)
 
 
 # Remove project file
 clean_project:
-	rm -rRf $(Q_PROJECT_PATH)/$(TOP_ENTITY)/*
+	rm -rRf $(Q_PROJECT_PATH)/$(TOP_ENTITY)/$(ASM_FILE)/*
 
+# Get Warn_error
+get_warn_error:
+	python3 $(INTEL_TOOL_PATH)/intel_tools.py --get_error_warn $(FOLDER_PATH).map.rpt $(FOLDER_PATH).map.rpt.csv
+	python3 $(INTEL_TOOL_PATH)/intel_tools.py --get_error_warn $(FOLDER_PATH).map.rpt $(FOLDER_PATH).fit.rpt.csv
 
-build_project: clean_project create_project_file create_pin_assigment_file
+# Pass
+# ASM_FILE
+# make build_project ASM_FILE=
+build_project: clean_project create_project_file update_g_rom_init create_pin_assigment_file
 	make qsh
 	make qsh_script
 	make qmap
 	make qfit
 	make qsta_post_map
-	make get_map_error_warn
-	make get_fit_error_warn
+	make get_warn_error
+
+#make get_map_error_warn
+#make get_fit_error_warn
 
 # Make bitstream
 build_bitsteam:
