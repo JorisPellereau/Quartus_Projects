@@ -31,4 +31,4 @@ intel_tools_class.create_init_rom_str_var(o_file_path    = o_file_path,
                                           mem_depth      = 256,
                                           mk_file_name   = asm_file,
                                           mk_file_path   = mk_file_path,
-                                          default_data   = 0x00000000)
+                                          default_data   = 0x77C00000)# -- NOP Operation 0x00000000)

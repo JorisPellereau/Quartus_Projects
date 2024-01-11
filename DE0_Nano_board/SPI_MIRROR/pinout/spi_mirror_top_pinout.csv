@@ -1,0 +1,13 @@
+Port,Direction,Pin Location,Bank,Standard,Pull-up,Drive [mA],Slew Rate,Terminaison,Comment
+clk_spi,in,A8,B8,3.3-V LVTTL,NA,NA,NA,NA,Connected to PIN 1
+rst_n,in,J15,B5,3.3-V LVTTL,NA,NA,NA,NA,Connected to KEY 0
+spi_di[0],in,B8,B8,3.3-V LVTTL,NA,NA,NA,NA,Connected to PIN 3
+spi_di[1],in,A2,B8,3.3-V LVTTL,NA,NA,NA,NA,Connected to PIN 5
+spi_di[2],in,B3,B8,3.3-V LVTTL,NA,NA,NA,NA,Connected to PIN 7
+spi_di[3],in,A4,B8,3.3-V LVTTL,NA,NA,NA,NA,Connected to PIN 9
+spi_do[0],out,C3,B8,3.3-V LVTTL,NA,4mA,2,NA,Connected to PIN 4
+spi_do[1],out,A3,B8,3.3-V LVTTL,NA,4mA,2,NA,Connected to PIN 6
+spi_do[2],out,B4,B8,3.3-V LVTTL,NA,4mA,2,NA,Connected to PIN 8
+spi_do[3],out,B5,B8,3.3-V LVTTL,NA,4mA,2,NA,Connected to PIN 10
+spi_cs_n,in,A5,B8,3.3-V LVTTL,NA,NA,NA,NA,Connected to PIN 13
+clk_spi_out,out,D3,B8,3.3-V LVTTL,NA,4ma,2,NA,Connected to PIN 2
