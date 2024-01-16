@@ -51,6 +51,20 @@ proc closeport { } {
     catch {close_device}
 }
 
+proc write_data {inst_idx ir_val dr_val dr_length} {
+    openport
+    device_lock -timeout 10000
+    # Shift through DR. Note that -dr_value is unimportant since we’re not actually capturing the value inside the part, just seeing what shifts out
+    puts "Write - IR_VAL : $ir_val - dr_val : $dr_val - dr_length : $dr_length"
+    device_virtual_ir_shift -instance_index $inst_idx -ir_value $ir_val -no_captured_ir_value
+    device_virtual_dr_shift -dr_value $dr_val -instance_index $inst_idx -length $dr_length -no_captured_dr_value -value_in_hex
+    
+    # Set IR back to 0, which is bypass mode
+    device_virtual_ir_shift -instance_index $inst_idx -ir_value 0 -no_captured_ir_value
+    
+    closeport
+}
+
 proc set_LEDs {send_data} {
     openport
     device_lock -timeout 10000

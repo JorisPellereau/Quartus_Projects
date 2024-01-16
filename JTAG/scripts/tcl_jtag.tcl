@@ -1,23 +1,32 @@
+# /opt/Quartus/Quartus_20_1_1_nios_eds/quartus/bin/quartus_stp -t tcl_jtag.tcl 31
+
+
 source "vjtag.tcl"
 
 get_hw_device_name
 
 # 1st Agument is the leds value
-set leds_value [lindex $argv 0]
+#set leds_value [lindex $argv 0]
+set inst_idx  [lindex $argv 0]
+set ir_val    [lindex $argv 1]
+set dr_val    [lindex $argv 2]
+set dr_length [lindex $argv 3]
 
-set_LEDs $leds_value
+puts "Write DATA to DR"
+write_data $inst_idx $ir_val $dr_val $dr_length
+#set_LEDs $leds_value
 
-puts "READ DR Registers :"
+#puts "READ DR Registers :"
 
-openport
-device_lock -timeout 10000
-device_virtual_ir_shift -instance_index 0 -ir_value 1 -no_captured_ir_value
-set dr_read [device_virtual_dr_shift -instance_index 0  -length 8 -value_in_hex]
+# openport
+# device_lock -timeout 10000
+# device_virtual_ir_shift -instance_index 0 -ir_value 1 -no_captured_ir_value
+# set dr_read [device_virtual_dr_shift -instance_index 0  -length 8 -value_in_hex]
 
 # Set IR back to 0, which is bypass mode
-device_virtual_ir_shift -instance_index 0 -ir_value 0 -no_captured_ir_value
-closeport
-puts $dr_read
+#device_virtual_ir_shift -instance_index 0 -ir_value 0 -no_captured_ir_value
+#closeport
+#puts $dr_read
 
 # openport
 # device_lock -timeout 10000
