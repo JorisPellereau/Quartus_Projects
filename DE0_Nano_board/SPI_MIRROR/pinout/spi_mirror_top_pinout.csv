@@ -11,3 +11,4 @@ spi_do[2],out,B4,B8,3.3-V LVTTL,NA,4mA,2,NA,Connected to PIN 8
 spi_do[3],out,B5,B8,3.3-V LVTTL,NA,4mA,2,NA,Connected to PIN 10
 spi_cs_n,in,A5,B8,3.3-V LVTTL,NA,NA,NA,NA,Connected to PIN 13
 clk_spi_out,out,D3,B8,3.3-V LVTTL,NA,4ma,2,NA,Connected to PIN 2
+spi_cs_n_out,out,D5,B8,3.3-V LVTTL,NA,4ma,2,NA,Connected to PIN 14
