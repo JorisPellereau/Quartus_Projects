@@ -3,9 +3,21 @@
 
 # == DESIGN FILE LIST ==
 
+# TOP for exercice 5
+ifeq ($(TOP_ENTITY), exercice_5_p94_top)
+	DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/PR_115/sources/lib_exercices_p94/exercice_5.vhd
+	DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/PR_115/sources/lib_exercices_p94/exercice_5_p94_top.vhd
+endif
 
-# TOP
-DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/PR_115/sources/lib_exercices_p40/case_sel_p40.vhd
-DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/PR_115/sources/lib_exercices_p40/exercices_p40_top.vhd
+# TOP for exercice 6
+ifeq ($(TOP_ENTITY), exercice_6_p94_top)
+	DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/PR_115/sources/lib_exercices_p94/exercice_6.vhd
+	DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/PR_115/sources/lib_exercices_p94/exercice_6_p94_top.vhd
+endif
 
+# TOP for exercice 7
+ifeq ($(TOP_ENTITY), exercice_7_p94_top)
+	DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/PR_115/sources/lib_exercices_p94/exercice_7.vhd
+	DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/PR_115/sources/lib_exercices_p94/exercice_7_p94_top.vhd
+endif
 

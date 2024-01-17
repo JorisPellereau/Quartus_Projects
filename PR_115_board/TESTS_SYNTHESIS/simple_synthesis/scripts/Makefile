@@ -1,6 +1,6 @@
 # ========================================== #
 #
-# Makefile for EXERCICE P94 project
+# Makefile for simple synthesis tests
 #
 # ========================================== #
 
@@ -8,16 +8,10 @@ include /home/linux-jp/Documents/GitHub/Generics_Makefiles/Makefiles/MakefileInt
 
 # Arguments to pass :
 # TOP_ENTITY=
-# SEL_EXO=
 
-# TOP_ENTITY=exercice_5_p94_top
-# SEL_EXOS=EXO5_V1 or  EXO5_V2
+# TOP_ENTITY=latch_data_1_top
 
-# TOP_ENTITY=exercice_6_p94_top
-# SEL_EXOS=EXO6_V1 or  EXO6_V2
-
-# TOP_ENTITY=exercice_7_p94_top
-# SEL_EXOS=EXO7_V1 or  EXO7_V2
+# TOP_ENTITY=multiplier_9x9_top SEL_VERSION=COMB_UNSIGNED
 
 PINOUT_EXTRACT=/home/linux-jp/Documents/GitHub/Python/FPGA_environment/pinout_extract.py
 
@@ -26,10 +20,8 @@ INTEL_TOOL_PATH = /home/linux-jp/Documents/GitHub/Python/FPGA_environment
 
 # MakefileIntel Configuration
 QUARTUS_PATH=/opt/Quartus/Quartus_20_1_1_nios_eds/quartus/bin
-#Q_PROJECT_NAME=JTAG_7SEG
 Q_PROJECT_PATH=/home/linux-jp/QUARTUS_PROJECTS
-Q_PROJECT_NAME_SUFFIX=/$(SEL_EXO)
-FOLDER_PATH=$(Q_PROJECT_PATH)/$(TOP_ENTITY)/$(SEL_EXO)/$(TOP_ENTITY)
+FOLDER_PATH=$(Q_PROJECT_PATH)/$(TOP_ENTITY)
 
 #
 pinout_file=../pinout/$(TOP_ENTITY)_pinout.csv
@@ -45,11 +37,11 @@ DEVICE=EP4CE115F29C7
 EN_SH_SCRIPT=ON
 
 # SH Scripts Location
-SH_SCRIPT=$(Q_PROJECT_PATH)/$(TOP_ENTITY)/$(SEL_EXO)/$(pin_assig_file)
+SH_SCRIPT=$(Q_PROJECT_PATH)/$(TOP_ENTITY)/$(pin_assig_file)
 
 all:
 	@echo ""
-	@echo "Makefile for Exercices P94"
+	@echo "Makefile for simple synthesis"
 	@echo ""
 
 
@@ -104,7 +96,7 @@ PGM_ARGS=-c $(CABLE_NAME) -m JTAG
 #-o $(TOP_ENTITY).sof
 MODEL=slow
 MULTICORNER=ON
-SDC_FILE=/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/TESTS_SYNTHESIS/Exercices_p94/scripts/$(TOP_ENTITY)_constraints.sdc
+SDC_FILE=/home/linux-jp/Documents/GitHub/Quartus_Projects/PR_115_board/TESTS_SYNTHESIS/simple_synthesis/scripts/$(TOP_ENTITY)_constraints.sdc
 SPEED=7
 TEMPERATURE_IN_C=25
 #
@@ -136,38 +128,30 @@ tan_test:
 # A folder for each ROM file
 # the qproject.tcl file is located in the project folder
 create_project_file:
-	if [ ! -d $(Q_PROJECT_PATH)/$(TOP_ENTITY)/$(SEL_EXO) ]; then \
+	if [ ! -d $(Q_PROJECT_PATH)/$(TOP_ENTITY) ]; then \
 	  mkdir $(Q_PROJECT_PATH)/$(TOP_ENTITY); \
-	  mkdir $(Q_PROJECT_PATH)/$(TOP_ENTITY)/$(SEL_EXO); \
 	else \
 	  make clean_project; \
 	fi
-	python3 $(INTEL_TOOL_PATH)/intel_tools.py --create_project_file $(FAMILY) $(REVISION) $(Q_PROJECT_NAME) $(Q_PROJECT_PATH)/$(TOP_ENTITY)/$(SEL_EXO)/qproject.tcl
+	python3 $(INTEL_TOOL_PATH)/intel_tools.py --create_project_file $(FAMILY) $(REVISION) $(Q_PROJECT_NAME) $(Q_PROJECT_PATH)/$(TOP_ENTITY)/qproject.tcl
 
 
 
 # Create PIN Assigment configuration file
 CUSTOM_CMD?=
 
-
-ifeq ($(TOP_ENTITY), exercice_5_p94_top)
-	CUSTOM_CMD="set_parameter -entity exercice_5 -name G_SEL_EXO \"$(SEL_EXO)\""
+ifeq ($(TOP_ENTITY), multiplier_9x9_top)
+	CUSTOM_CMD="set_parameter -entity multiplier_9x9 -name G_SEL_VERSION \"$(SEL_VERSION)\""
 endif
-
-ifeq ($(TOP_ENTITY), exercice_6_p94_top)
-	CUSTOM_CMD="set_parameter -entity exercice_6 -name G_SEL_EXO \"$(SEL_EXO)\""
-endif
-#$(SET_ROM_INIT_CMD)
-#$($(INIT_ROM_VAR))
 
 
 create_pin_assigment_file:
-	python3 $(INTEL_TOOL_PATH)/intel_tools.py --create_setup_file $(Q_PROJECT_NAME) $(pinout_file) $(Q_PROJECT_PATH)/$(TOP_ENTITY)/$(SEL_EXO)/$(pin_assig_file) $(SDC_FILE) $(CUSTOM_CMD)
+	python3 $(INTEL_TOOL_PATH)/intel_tools.py --create_setup_file $(Q_PROJECT_NAME) $(pinout_file) $(Q_PROJECT_PATH)/$(TOP_ENTITY)/$(pin_assig_file) $(SDC_FILE) $(CUSTOM_CMD)
 
 
 # Remove project file
 clean_project:
-	rm -rRf $(Q_PROJECT_PATH)/$(TOP_ENTITY)/$(SEL_EXO)/*
+	rm -rRf $(Q_PROJECT_PATH)/$(TOP_ENTITY)/*
 
 # Get Warn_error
 get_warn_error:
@@ -176,8 +160,8 @@ get_warn_error:
 	python3 $(INTEL_TOOL_PATH)/intel_tools.py --get_error_warn $(FOLDER_PATH).sta.rpt $(FOLDER_PATH).sta.rpt.csv
 
 # Pass
-# TOP_ENTITY= SEL_EXO=
-# make build_project TOP_ENTITY= SEL_EXO=
+# TOP_ENTITY= 
+# make build_project TOP_ENTITY= 
 build_project:  create_project_file create_pin_assigment_file
 	make qsh
 	make qsh_script

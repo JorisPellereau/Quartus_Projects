@@ -1,0 +1,11 @@
+Port,Direction,Pin Location,Bank,Standard,Pull-up,Drive [mA],Slew Rate,Terminaison,Comment
+clk_sys,in,Y2,B2,3.3-V LVTTL,NA,NA,NA,NA,
+rst_n_sys,in,M23,B7,2.5 V,NA,NA,NA,NA,JP7 configured in 2.5 V on PR115 board
+cnt_out[0],out,AC15,B4,3.3-V LVTTL,NA,4ma,2,NA,
+cnt_out[1],out,Y17,B4,3.3-V LVTTL,NA,4ma,2,NA,
+cnt_out[2],out,Y16,B4,3.3-V LVTTL,NA,4ma,2,NA,
+cnt_out[3],out,AE16,B4,3.3-V LVTTL,NA,4ma,2,NA,
+cnt_out[4],out,AE15,B4,3.3-V LVTTL,NA,4ma,2,NA,
+cnt_out[5],out,AF16,B4,3.3-V LVTTL,NA,4ma,2,NA,
+cnt_out[6],out,AF15,B4,3.3-V LVTTL,NA,4ma,2,NA,
+cnt_out[7],out,AE21,B4,3.3-V LVTTL,NA,4ma,2,NA,

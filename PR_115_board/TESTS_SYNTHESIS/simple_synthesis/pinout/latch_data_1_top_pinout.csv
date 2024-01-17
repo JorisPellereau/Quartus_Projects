@@ -1,0 +1,6 @@
+Port,Direction,Pin Location,Bank,Standard,Pull-up,Drive [mA],Slew Rate,Terminaison,Comment
+clk_sys,in,Y2,B2,3.3-V LVTTL,NA,NA,NA,NA,
+rst_n_sys,in,M23,B7,2.5 V,NA,NA,NA,NA,JP7 configured in 2.5 V on PR115 board
+a,in,AB21,B4,3.3-V LVTTL,NA,NA,NA,NA,Connected to GPIO[2]
+b,in,AC21,B4,3.3-V LVTTL,NA,NA,NA,NA,Connected to GPIO[4]
+output,out,AC15,B4,3.3-V LVTTL,NA,4ma,2,NA,
