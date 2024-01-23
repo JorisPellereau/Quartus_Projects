@@ -130,6 +130,8 @@ tan_test:
 create_project_file:
 	if [ ! -d $(Q_PROJECT_PATH)/$(TOP_ENTITY)/$(ASM_FILE) ]; then \
 	  mkdir $(Q_PROJECT_PATH)/$(TOP_ENTITY)/$(ASM_FILE); \
+	else \
+	  make clean_project; \
 	fi
 	python3 $(INTEL_TOOL_PATH)/intel_tools.py --create_project_file $(FAMILY) $(REVISION) $(Q_PROJECT_NAME) $(Q_PROJECT_PATH)/$(TOP_ENTITY)/$(ASM_FILE)/qproject.tcl
 
@@ -187,7 +189,7 @@ get_warn_error:
 # Pass
 # ASM_FILE
 # make build_project ASM_FILE=
-build_project: clean_project create_project_file update_g_rom_init create_pin_assigment_file
+build_project: create_project_file update_g_rom_init create_pin_assigment_file
 	make qsh
 	make qsh_script
 	make qmap

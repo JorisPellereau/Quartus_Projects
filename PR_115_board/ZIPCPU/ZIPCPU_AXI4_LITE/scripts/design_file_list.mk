@@ -41,6 +41,7 @@ DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/MAX7219/sources/lib_
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/AXI/AXI4_Lite/sources/lib_axi4_lite/axi4_lite_master.vhd
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/AXI/AXI4_Lite/sources/lib_axi4_lite/axi4_lite_slave_itf.vhd
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/AXI/AXI4_Lite/sources/lib_axi4_lite/pkg_axi4_lite_interco.vhd
+DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/AXI/AXI4_Lite/sources/lib_axi4_lite/slave_sel_decoder.vhd
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/AXI/AXI4_Lite/sources/lib_axi4_lite/axi4_lite_interco_1_to_n.vhd
 
 
@@ -65,6 +66,10 @@ DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/LCD/LCD_CFAH1602BTMC
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/SPI/sources/lib_spi_master/spi_master_itf.vhd
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/SPI/sources/lib_spi_master/spi_master.vhd
 
+# -- SPI SLAVE
+DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/SPI/sources/lib_spi_slave/spi_slave_itf.vhd
+DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/SPI/sources/lib_spi_slave/spi_slave.vhd
+
 # -- AXI4 Lite LCD
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/AXI/AXI4_Lite/sources/lib_axi4_lite_lcd/axi4_lite_lcd_pkg.vhd
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/AXI/AXI4_Lite/sources/lib_axi4_lite_lcd/axi4_lite_lcd_registers.vhd
@@ -83,6 +88,11 @@ DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/AXI/AXI4_Lite/source
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/AXI/AXI4_Lite/sources/lib_axi4_lite_spi_master/axi4_lite_spi_master_pkg.vhd
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/AXI/AXI4_Lite/sources/lib_axi4_lite_spi_master/axi4_lite_spi_master_registers.vhd
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/AXI/AXI4_Lite/sources/lib_axi4_lite_spi_master/axi4_lite_spi_master.vhd
+
+# -- AXI4 Lite SPI SLAVE
+DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/AXI/AXI4_Lite/sources/lib_axi4_lite_spi_slave/axi4_lite_spi_slave_pkg.vhd
+DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/AXI/AXI4_Lite/sources/lib_axi4_lite_spi_slave/axi4_lite_spi_slave_registers.vhd
+DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/AXI/AXI4_Lite/sources/lib_axi4_lite_spi_slave/axi4_lite_spi_slave.vhd
 
 # -- VJTAG Interface
 DESIGN_FILE_LIST+=/home/linux-jp/Documents/GitHub/VHDL_code/Intel/JTAG/sources/lib_jtag_intel/vjtag_intf.vhd

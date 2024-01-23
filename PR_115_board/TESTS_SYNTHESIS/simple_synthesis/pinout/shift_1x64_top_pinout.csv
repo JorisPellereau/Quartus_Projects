@@ -1,0 +1,5 @@
+Port,Direction,Pin Location,Bank,Standard,Pull-up,Drive [mA],Slew Rate,Terminaison,Comment
+clk,in,Y2,B2,3.3-V LVTTL,NA,NA,NA,NA,
+shift,in,AC15,B4,3.3-V LVTTL,NA,NA,NA,NA,
+sr_in,in,Y17,B4,3.3-V LVTTL,NA,NA,NA,NA,
+sr_out,out,AB22,B4,3.3-V LVTTL,NA,NA,2,NA,
